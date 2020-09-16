@@ -1130,7 +1130,7 @@ static const Il2CppTokenRangePair s_rgctxIndices[1] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[1] = 
 {
-	{ (Il2CppRGCTXDataType)2, 14143 },
+	{ (Il2CppRGCTXDataType)2, 14134 },
 };
 extern const Il2CppCodeGenModule g_Unity_XR_ARKitCodeGenModule;
 const Il2CppCodeGenModule g_Unity_XR_ARKitCodeGenModule = 

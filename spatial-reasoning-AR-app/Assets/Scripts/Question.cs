@@ -1,3 +1,14 @@
+/*
+* Class to define the Question object, which holds the name of the model used for
+* this question, the correct rotation, the margin of error on the rotation (range),
+* and any alternate objects that might be shown (and chosen between) in the question.
+*
+* Intuitively, this class represents all of the information and methods needed to
+* display the question, give tools to answer it, and check for correctness of that answer.
+*
+* @author Selena Qian
+*/
+
 ﻿using System.Collections;
 using System;
 using System.Collections.Generic;

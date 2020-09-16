@@ -50,27 +50,23 @@ extern void Controller_updateCurrent_mC907107C7D296D122F50C2AEABEA8B8499C62267 (
 extern void Controller_checkCorrect_m48C2C5E70759F8A308447CEE59223994C96BDBA9 ();
 // 0x0000000F System.Void Controller::.ctor()
 extern void Controller__ctor_m8ECC1060F6835885E4EB6486F5494BBBCDD17B3A ();
-// 0x00000010 System.Void Data::.ctor()
-extern void Data__ctor_m37D40D286E76BD3945376CBFC2289C797B02CD0F ();
-// 0x00000011 System.Void DataArray::.ctor()
-extern void DataArray__ctor_mC3D393905811477B7BCD7D56BADD6F1518B7106A ();
-// 0x00000012 System.Void printRotation::Start()
-extern void printRotation_Start_mB08655284333791FF253E0439E1A48BEF3681998 ();
-// 0x00000013 System.Void printRotation::Update()
+// 0x00000010 System.Void printRotation::Update()
 extern void printRotation_Update_m960B13582126514789842D5659D7D88108F3AB93 ();
-// 0x00000014 System.Void printRotation::.ctor()
+// 0x00000011 System.Void printRotation::ifNewRotationPrint()
+extern void printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D ();
+// 0x00000012 System.Void printRotation::.ctor()
 extern void printRotation__ctor_mEF442B757E830186A1DE24E07E57DB1377286A3C ();
-// 0x00000015 System.Void Question::.ctor(System.String,UnityEngine.Vector3)
+// 0x00000013 System.Void Question::.ctor(System.String,UnityEngine.Vector3)
 extern void Question__ctor_mFD8FFA9C6D38A77899739EDC0172C76B3220FC95 ();
-// 0x00000016 System.Void Question::.ctor(System.String,UnityEngine.Vector3,System.String[])
+// 0x00000014 System.Void Question::.ctor(System.String,UnityEngine.Vector3,System.String[])
 extern void Question__ctor_mF8E347DD5B173EF9BC280886865FD3299638504D ();
-// 0x00000017 System.Boolean Question::isCorrect(System.Single,System.Single,System.Single)
+// 0x00000015 System.Boolean Question::isCorrect(System.Single,System.Single,System.Single)
 extern void Question_isCorrect_m6344EB5322DFDEB867A07D166ED06BF2225DBCD1 ();
-// 0x00000018 System.Boolean Question::withinRange(System.Single,System.Single)
+// 0x00000016 System.Boolean Question::withinRange(System.Single,System.Single)
 extern void Question_withinRange_mDAABFFA72A6E0E22F73E9131EF07C9726C986C10 ();
-// 0x00000019 System.String Question::getModel()
+// 0x00000017 System.String Question::getModel()
 extern void Question_getModel_m25260197309ECDBB34C421A200D49E3C64511179 ();
-static Il2CppMethodPointer s_methodPointers[25] = 
+static Il2CppMethodPointer s_methodPointers[23] = 
 {
 	Category__ctor_m0B0BFF8AA9775662A06F92F02E2C0BED82C152CF,
 	Category__ctor_mD0975E34D2A70F6F461D35938B64928A717B632B,
@@ -87,10 +83,8 @@ static Il2CppMethodPointer s_methodPointers[25] =
 	Controller_updateCurrent_mC907107C7D296D122F50C2AEABEA8B8499C62267,
 	Controller_checkCorrect_m48C2C5E70759F8A308447CEE59223994C96BDBA9,
 	Controller__ctor_m8ECC1060F6835885E4EB6486F5494BBBCDD17B3A,
-	Data__ctor_m37D40D286E76BD3945376CBFC2289C797B02CD0F,
-	DataArray__ctor_mC3D393905811477B7BCD7D56BADD6F1518B7106A,
-	printRotation_Start_mB08655284333791FF253E0439E1A48BEF3681998,
 	printRotation_Update_m960B13582126514789842D5659D7D88108F3AB93,
+	printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D,
 	printRotation__ctor_mEF442B757E830186A1DE24E07E57DB1377286A3C,
 	Question__ctor_mFD8FFA9C6D38A77899739EDC0172C76B3220FC95,
 	Question__ctor_mF8E347DD5B173EF9BC280886865FD3299638504D,
@@ -98,7 +92,7 @@ static Il2CppMethodPointer s_methodPointers[25] =
 	Question_withinRange_mDAABFFA72A6E0E22F73E9131EF07C9726C986C10,
 	Question_getModel_m25260197309ECDBB34C421A200D49E3C64511179,
 };
-static const int32_t s_InvokerIndices[25] = 
+static const int32_t s_InvokerIndices[23] = 
 {
 	136,
 	23,
@@ -118,8 +112,6 @@ static const int32_t s_InvokerIndices[25] =
 	23,
 	23,
 	23,
-	23,
-	23,
 	1594,
 	1672,
 	1673,
@@ -130,7 +122,7 @@ extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	25,
+	23,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,

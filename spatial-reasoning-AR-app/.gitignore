@@ -1,7 +1,7 @@
-spatial-reasoning-AR-app/one-question/Libraries/libiPhone-lib.a
-spatial-reasoning-AR-app/one-question/Libraries/libil2cpp.a
-spatial-reasoning-AR-app/test/Libraries/libiPhone-lib.a
-spatial-reasoning-AR-app/test/Libraries/libil2cpp.a
+/one-question/Libraries/libiPhone-lib.a
+/one-question/Libraries/libil2cpp.a
+/test/Libraries/libiPhone-lib.a
+/test/Libraries/libil2cpp.a
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #

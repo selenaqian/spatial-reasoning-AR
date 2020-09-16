@@ -34,12 +34,6 @@ struct VirtFuncInvoker0
 struct Category_tBA902362E18AF2A064E48D04335803BECE62F058;
 // Controller
 struct Controller_t8B9A16C877C6AB237600DBA7B1C74F13FE3FEBD6;
-// Data
-struct Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1;
-// DataArray
-struct DataArray_t2146BAA91D0006D0E36E1AD5DA2E1F495DDE7225;
-// Data[]
-struct DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10;
 // Question
 struct Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC;
 // Question[]
@@ -155,7 +149,7 @@ IL2CPP_EXTERN_C const uint32_t Controller_OnTrackedImagesChanged_m17385FEB959578
 IL2CPP_EXTERN_C const uint32_t Controller_checkCorrect_m48C2C5E70759F8A308447CEE59223994C96BDBA9_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Controller_updateCurrent_mC907107C7D296D122F50C2AEABEA8B8499C62267_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Question_withinRange_mDAABFFA72A6E0E22F73E9131EF07C9726C986C10_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t printRotation_Update_m960B13582126514789842D5659D7D88108F3AB93_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D_MetadataUsageId;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 
@@ -210,66 +204,6 @@ public:
 	inline void set_currentQuestion_1(int32_t value)
 	{
 		___currentQuestion_1 = value;
-	}
-};
-
-
-// Data
-struct  Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1  : public RuntimeObject
-{
-public:
-	// System.String Data::model
-	String_t* ___model_0;
-	// System.String Data::correctRotation
-	String_t* ___correctRotation_1;
-	// System.String Data::alternateObjects
-	String_t* ___alternateObjects_2;
-
-public:
-	inline static int32_t get_offset_of_model_0() { return static_cast<int32_t>(offsetof(Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1, ___model_0)); }
-	inline String_t* get_model_0() const { return ___model_0; }
-	inline String_t** get_address_of_model_0() { return &___model_0; }
-	inline void set_model_0(String_t* value)
-	{
-		___model_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___model_0), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_correctRotation_1() { return static_cast<int32_t>(offsetof(Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1, ___correctRotation_1)); }
-	inline String_t* get_correctRotation_1() const { return ___correctRotation_1; }
-	inline String_t** get_address_of_correctRotation_1() { return &___correctRotation_1; }
-	inline void set_correctRotation_1(String_t* value)
-	{
-		___correctRotation_1 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___correctRotation_1), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_alternateObjects_2() { return static_cast<int32_t>(offsetof(Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1, ___alternateObjects_2)); }
-	inline String_t* get_alternateObjects_2() const { return ___alternateObjects_2; }
-	inline String_t** get_address_of_alternateObjects_2() { return &___alternateObjects_2; }
-	inline void set_alternateObjects_2(String_t* value)
-	{
-		___alternateObjects_2 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___alternateObjects_2), (void*)value);
-	}
-};
-
-
-// DataArray
-struct  DataArray_t2146BAA91D0006D0E36E1AD5DA2E1F495DDE7225  : public RuntimeObject
-{
-public:
-	// Data[] DataArray::allData
-	DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10* ___allData_0;
-
-public:
-	inline static int32_t get_offset_of_allData_0() { return static_cast<int32_t>(offsetof(DataArray_t2146BAA91D0006D0E36E1AD5DA2E1F495DDE7225, ___allData_0)); }
-	inline DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10* get_allData_0() const { return ___allData_0; }
-	inline DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10** get_address_of_allData_0() { return &___allData_0; }
-	inline void set_allData_0(DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10* value)
-	{
-		___allData_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___allData_0), (void*)value);
 	}
 };
 
@@ -2559,6 +2493,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Category_nextQuestion_m73121A31E55CF7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
 // System.Boolean Question::withinRange(System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Question_withinRange_mDAABFFA72A6E0E22F73E9131EF07C9726C986C10 (Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC * __this, float ___current0, float ___desired1, const RuntimeMethod* method);
+// System.Void printRotation::ifNewRotationPrint()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D (printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Quaternion::op_Inequality(UnityEngine.Quaternion,UnityEngine.Quaternion)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Quaternion_op_Inequality_mDA6D2E63A498C8A9AB9A11DD7EA3B96567390C70 (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___lhs0, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___rhs1, const RuntimeMethod* method);
 #ifdef __clang__
@@ -3122,38 +3058,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller__ctor_m8ECC1060F6835885E4EB64
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void Data::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Data__ctor_m37D40D286E76BD3945376CBFC2289C797B02CD0F (Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1 * __this, const RuntimeMethod* method)
-{
-	{
-		Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void DataArray::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DataArray__ctor_mC3D393905811477B7BCD7D56BADD6F1518B7106A (DataArray_t2146BAA91D0006D0E36E1AD5DA2E1F495DDE7225 * __this, const RuntimeMethod* method)
-{
-	{
-		Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 // System.Void Question::.ctor(System.String,UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Question__ctor_mFD8FFA9C6D38A77899739EDC0172C76B3220FC95 (Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC * __this, String_t* ___objName0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___vec1, const RuntimeMethod* method)
 {
@@ -3266,20 +3170,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Question_getModel_m25260197309ECDBB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void printRotation::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void printRotation_Start_mB08655284333791FF253E0439E1A48BEF3681998 (printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612 * __this, const RuntimeMethod* method)
+// System.Void printRotation::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void printRotation_Update_m960B13582126514789842D5659D7D88108F3AB93 (printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612 * __this, const RuntimeMethod* method)
 {
 	{
+		printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Void printRotation::Update()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void printRotation_Update_m960B13582126514789842D5659D7D88108F3AB93 (printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612 * __this, const RuntimeMethod* method)
+// System.Void printRotation::ifNewRotationPrint()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D (printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (printRotation_Update_m960B13582126514789842D5659D7D88108F3AB93_MetadataUsageId);
+		il2cpp_codegen_initialize_method (printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  V_0;

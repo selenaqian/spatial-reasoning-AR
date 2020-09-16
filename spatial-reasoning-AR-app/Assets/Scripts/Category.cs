@@ -1,3 +1,13 @@
+/*
+* Class to define the Category object, which holds an array of Question objects
+* and the progress of the user (stored in currentQuestion).
+*
+* Intuitively, this class represents a grouping of similar questions, e.g. questions
+* that teach understanding of rotations.
+*
+* @author Selena Qian
+*/
+
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;

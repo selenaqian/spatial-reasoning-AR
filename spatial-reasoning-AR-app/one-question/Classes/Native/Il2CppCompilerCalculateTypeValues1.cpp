@@ -22,8 +22,6 @@
 
 // Category
 struct Category_tBA902362E18AF2A064E48D04335803BECE62F058;
-// Data[]
-struct DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10;
 // Question[]
 struct QuestionU5BU5D_t8FC7EC9B3A1152424EB02BB34293E4EA506B195E;
 // System.Action
@@ -389,34 +387,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_tF8A948C14EE892A95D0E0992A0BE6B176FF2DA1D 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_tAA355D8AE5C7E9492E77ED0BEF24E3CD28D275D9 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_tC67A5EC9770A65C5DCFEB2916D4DB35BB97F7FDB 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_t4F0A0E4F117BEB98FD7E89F0DE774BD5A1E6DBAC 
+struct  U3CModuleU3E_t2A7F258263D7FCABE550B20934E57EF745D92063 
 {
 public:
 
@@ -434,7 +405,25 @@ public:
 
 
 // <Module>
+struct  U3CModuleU3E_tC67A5EC9770A65C5DCFEB2916D4DB35BB97F7FDB 
+{
+public:
+
+public:
+};
+
+
+// <Module>
 struct  U3CModuleU3E_tB308A2384DEB86F8845A4E61970976B8944B5DC4 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_t8276593D2182AD0E8D12AF6BAFC4DCCD5C1DB6C1 
 {
 public:
 
@@ -452,7 +441,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_t2A7F258263D7FCABE550B20934E57EF745D92063 
+struct  U3CModuleU3E_tF8A948C14EE892A95D0E0992A0BE6B176FF2DA1D 
 {
 public:
 
@@ -461,7 +450,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_tCE4B768174CDE0294B05DD8ED59A7763FF34E99B 
+struct  U3CModuleU3E_tD4E2C466946EFCC911763D21CD7F606F5D963632 
 {
 public:
 
@@ -488,15 +477,6 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_tD4E2C466946EFCC911763D21CD7F606F5D963632 
-{
-public:
-
-public:
-};
-
-
-// <Module>
 struct  U3CModuleU3E_tCD4309F8DDA0F37A98DBCDFE49F6C8F300C242B0 
 {
 public:
@@ -506,7 +486,25 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_t8276593D2182AD0E8D12AF6BAFC4DCCD5C1DB6C1 
+struct  U3CModuleU3E_t4F0A0E4F117BEB98FD7E89F0DE774BD5A1E6DBAC 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_tAA355D8AE5C7E9492E77ED0BEF24E3CD28D275D9 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_tCE4B768174CDE0294B05DD8ED59A7763FF34E99B 
 {
 public:
 
@@ -542,66 +540,6 @@ public:
 	inline void set_currentQuestion_1(int32_t value)
 	{
 		___currentQuestion_1 = value;
-	}
-};
-
-
-// Data
-struct  Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1  : public RuntimeObject
-{
-public:
-	// System.String Data::model
-	String_t* ___model_0;
-	// System.String Data::correctRotation
-	String_t* ___correctRotation_1;
-	// System.String Data::alternateObjects
-	String_t* ___alternateObjects_2;
-
-public:
-	inline static int32_t get_offset_of_model_0() { return static_cast<int32_t>(offsetof(Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1, ___model_0)); }
-	inline String_t* get_model_0() const { return ___model_0; }
-	inline String_t** get_address_of_model_0() { return &___model_0; }
-	inline void set_model_0(String_t* value)
-	{
-		___model_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___model_0), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_correctRotation_1() { return static_cast<int32_t>(offsetof(Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1, ___correctRotation_1)); }
-	inline String_t* get_correctRotation_1() const { return ___correctRotation_1; }
-	inline String_t** get_address_of_correctRotation_1() { return &___correctRotation_1; }
-	inline void set_correctRotation_1(String_t* value)
-	{
-		___correctRotation_1 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___correctRotation_1), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_alternateObjects_2() { return static_cast<int32_t>(offsetof(Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1, ___alternateObjects_2)); }
-	inline String_t* get_alternateObjects_2() const { return ___alternateObjects_2; }
-	inline String_t** get_address_of_alternateObjects_2() { return &___alternateObjects_2; }
-	inline void set_alternateObjects_2(String_t* value)
-	{
-		___alternateObjects_2 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___alternateObjects_2), (void*)value);
-	}
-};
-
-
-// DataArray
-struct  DataArray_t2146BAA91D0006D0E36E1AD5DA2E1F495DDE7225  : public RuntimeObject
-{
-public:
-	// Data[] DataArray::allData
-	DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10* ___allData_0;
-
-public:
-	inline static int32_t get_offset_of_allData_0() { return static_cast<int32_t>(offsetof(DataArray_t2146BAA91D0006D0E36E1AD5DA2E1F495DDE7225, ___allData_0)); }
-	inline DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10* get_allData_0() const { return ___allData_0; }
-	inline DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10** get_address_of_allData_0() { return &___allData_0; }
-	inline void set_allData_0(DataU5BU5D_t95A254F67E66267AB540DB330F437E743EA71E10* value)
-	{
-		___allData_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___allData_0), (void*)value);
 	}
 };
 
@@ -17695,28 +17633,14 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2434[7] =
 	Controller_t8B9A16C877C6AB237600DBA7B1C74F13FE3FEBD6::get_offset_of_currentRotation_10(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2435;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2435 = { sizeof (Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1), -1, 0, 0 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2435[3] = 
-{
-	Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1::get_offset_of_model_0(),
-	Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1::get_offset_of_correctRotation_1(),
-	Data_t3A73F493C32309AC2326AE3EA490F1D3436D96A1::get_offset_of_alternateObjects_2(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2436;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2436 = { sizeof (DataArray_t2146BAA91D0006D0E36E1AD5DA2E1F495DDE7225), -1, 0, 0 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2436[1] = 
-{
-	DataArray_t2146BAA91D0006D0E36E1AD5DA2E1F495DDE7225::get_offset_of_allData_0(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2437;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2437 = { sizeof (printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612), -1, 0, 0 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2437[1] = 
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2435 = { sizeof (printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612), -1, 0, 0 };
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2435[1] = 
 {
 	printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612::get_offset_of_previousRotation_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2438;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2438 = { sizeof (Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC), -1, 0, 0 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2438[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2436;
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2436 = { sizeof (Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC), -1, 0, 0 };
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2436[4] = 
 {
 	Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC::get_offset_of_model_0(),
 	Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC::get_offset_of_correctRotation_1(),

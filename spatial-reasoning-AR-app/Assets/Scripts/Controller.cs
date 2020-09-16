@@ -1,3 +1,13 @@
+/*
+* Controls flow of application. Changes what appears as the prefab on the AR marker,
+* calls checks for correctness and subsequent updates to the Category object.
+*
+* Currently supports only one category of questions, rotations, but could easily
+* (and likely will) be modified to support multiple categories.
+*
+* @author Selena Qian
+*/
+
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
