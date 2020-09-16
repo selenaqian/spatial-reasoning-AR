@@ -5,35 +5,33 @@ using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.XR.ARFoundation;
 
-[System.Serializable]
-public class Category : MonoBehaviour
+public class Category
 {
-    public const String MODEL_DATA = "model";
-    public const String ROTATION_DATA = "currentRotation";
-    public const String ALTERNATE_MODELS = "alternateObjects";
-    Question[] allQuestions;
-    int currentQuestion;
+    private Question[] allQuestions;
+    private int currentQuestion;
 
     public Category(String file) {
-      Dictionary<String, String>[] data = JsonUtility.FromJson<Dictionary<String, String>[]>(Resources.Load<TextAsset>(file).ToString());
-      allQuestions = new Question[data.Length];
-      populateAllQuestions(data);
+      DataArray data = JsonUtility.FromJson<DataArray>(Resources.Load<TextAsset>(file).ToString());
+      allQuestions = new Question[data.allData.Length];
+      populateAllQuestions(data.allData);
+      Debug.Log("questions: " + allQuestions[0]);
       if(PlayerPrefs.HasKey("currentQuestion")) {
-        int currentQuestion = PlayerPrefs.GetInt("currentQuestion");
+        currentQuestion = PlayerPrefs.GetInt("currentQuestion");
       } else {
-        int currentQuestion = 0;
+        currentQuestion = 0;
       }
+      Debug.Log("currentQuestion: " + currentQuestion);
     }
 
-    private void populateAllQuestions(Dictionary<String, String>[] data) {
+    private void populateAllQuestions(Data[] data) {
       for (int i = 0; i < data.Length; i++) {
         Question temp;
-        Vector3 rotationData = getVector(data[i][ROTATION_DATA]);
-        if (data[i].ContainsKey(ALTERNATE_MODELS)) {
-          String[] alternates = findAlternates(data[i][ALTERNATE_MODELS]);
-          temp = new Question(data[i][MODEL_DATA], rotationData, alternates);
+        Vector3 rotationData = getVector(data[i].correctRotation);
+        if (data[i].alternateObjects != null) {
+          String[] alternates = findAlternates(data[i].alternateObjects);
+          temp = new Question(data[i].model, rotationData, alternates);
         } else {
-          temp = new Question(data[i][MODEL_DATA], rotationData);
+          temp = new Question(data[i].model, rotationData);
         }
         allQuestions[i] = temp;
       }
@@ -57,15 +55,17 @@ public class Category : MonoBehaviour
       return new String[4];
     }
 
-    public GameObject getCurrentModel() {
+    public String getCurrentModel() {
       return allQuestions[currentQuestion].getModel();
     }
 
-    public void nextQuestion() {
+    public int nextQuestion() {
       currentQuestion++;
       if (currentQuestion >= allQuestions.Length) {
         categoryComplete();
+        return -1;
       }
+      return currentQuestion;
     }
 
     public void categoryComplete() {
