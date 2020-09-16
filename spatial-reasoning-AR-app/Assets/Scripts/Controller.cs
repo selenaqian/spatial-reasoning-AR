@@ -17,7 +17,7 @@ public class Controller : MonoBehaviour
 
     void Awake()
     {
-      rotations = new Category(ROTATIONS_JSON);
+      rotations = JsonUtility.FromJson<Category>(Resources.Load<TextAsset>(ROTATIONS_JSON).ToString());
       Debug.Log(rotations);
       myTrackedImageManager  = GetComponent<ARTrackedImageManager>();
       current = null;

@@ -5,36 +5,20 @@ using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.XR.ARFoundation;
 
+[System.Serializable]
 public class Category
 {
-    private Question[] allQuestions;
-    private int currentQuestion;
+    public Question[] allData;
+    public int currentQuestion;
 
-    public Category(String file) {
-      DataArray data = JsonUtility.FromJson<DataArray>(Resources.Load<TextAsset>(file).ToString());
-      allQuestions = new Question[data.allData.Length];
-      populateAllQuestions(data.allData);
-      Debug.Log("questions: " + allQuestions[0]);
-      if(PlayerPrefs.HasKey("currentQuestion")) {
-        currentQuestion = PlayerPrefs.GetInt("currentQuestion");
-      } else {
-        currentQuestion = 0;
-      }
-      Debug.Log("currentQuestion: " + currentQuestion);
+    public Category(Question[] questions, int current) {
+      allData = questions;
+      currentQuestion = current;
     }
 
-    private void populateAllQuestions(Data[] data) {
-      for (int i = 0; i < data.Length; i++) {
-        Question temp;
-        Vector3 rotationData = getVector(data[i].correctRotation);
-        if (data[i].alternateObjects != null) {
-          String[] alternates = findAlternates(data[i].alternateObjects);
-          temp = new Question(data[i].model, rotationData, alternates);
-        } else {
-          temp = new Question(data[i].model, rotationData);
-        }
-        allQuestions[i] = temp;
-      }
+    public Category() {
+      allData = new Question[10];
+      currentQuestion = 0;
     }
 
     private Vector3 getVector(String vectorAsString) {
@@ -56,12 +40,12 @@ public class Category
     }
 
     public String getCurrentModel() {
-      return allQuestions[currentQuestion].getModel();
+      return allData[currentQuestion].getModel();
     }
 
     public int nextQuestion() {
       currentQuestion++;
-      if (currentQuestion >= allQuestions.Length) {
+      if (currentQuestion >= allData.Length) {
         categoryComplete();
         return -1;
       }
@@ -75,6 +59,6 @@ public class Category
 
     public System.Boolean isCorrect(GameObject obj) {
       Vector3 rotation = obj.transform.rotation.eulerAngles;
-      return allQuestions[currentQuestion].isCorrect(rotation.x, rotation.y, rotation.z);
+      return allData[currentQuestion].isCorrect(rotation.x, rotation.y, rotation.z);
     }
 }

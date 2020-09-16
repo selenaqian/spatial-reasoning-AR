@@ -792,18 +792,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.PlayerConnectionInternal
 
-	//Start Registrations for type : UnityEngine.PlayerPrefs
-
-		//System.Boolean UnityEngine.PlayerPrefs::HasKey(System.String)
-		void Register_UnityEngine_PlayerPrefs_HasKey();
-		Register_UnityEngine_PlayerPrefs_HasKey();
-
-		//System.Int32 UnityEngine.PlayerPrefs::GetInt(System.String,System.Int32)
-		void Register_UnityEngine_PlayerPrefs_GetInt();
-		Register_UnityEngine_PlayerPrefs_GetInt();
-
-	//End Registrations for type : UnityEngine.PlayerPrefs
-
 	//Start Registrations for type : UnityEngine.QualitySettings
 
 		//System.Void UnityEngine.QualitySettings::set_vSyncCount(System.Int32)

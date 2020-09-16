@@ -20,10 +20,10 @@ IL2CPP_EXTERN_C_END
 
 
 
-// 0x00000001 System.Void Category::.ctor(System.String)
-extern void Category__ctor_m01EDA538A04F2404964DE6D33ECD17D542B1BD31 ();
-// 0x00000002 System.Void Category::populateAllQuestions(Data[])
-extern void Category_populateAllQuestions_mDC13F701350E98FDEC702174953454039CF110DE ();
+// 0x00000001 System.Void Category::.ctor(Question[],System.Int32)
+extern void Category__ctor_m0B0BFF8AA9775662A06F92F02E2C0BED82C152CF ();
+// 0x00000002 System.Void Category::.ctor()
+extern void Category__ctor_mD0975E34D2A70F6F461D35938B64928A717B632B ();
 // 0x00000003 UnityEngine.Vector3 Category::getVector(System.String)
 extern void Category_getVector_mF84A66426BB02A24EE696A4A399CBA29A97E93D0 ();
 // 0x00000004 System.String[] Category::findAlternates(System.String)
@@ -72,8 +72,8 @@ extern void Question_withinRange_mDAABFFA72A6E0E22F73E9131EF07C9726C986C10 ();
 extern void Question_getModel_m25260197309ECDBB34C421A200D49E3C64511179 ();
 static Il2CppMethodPointer s_methodPointers[25] = 
 {
-	Category__ctor_m01EDA538A04F2404964DE6D33ECD17D542B1BD31,
-	Category_populateAllQuestions_mDC13F701350E98FDEC702174953454039CF110DE,
+	Category__ctor_m0B0BFF8AA9775662A06F92F02E2C0BED82C152CF,
+	Category__ctor_mD0975E34D2A70F6F461D35938B64928A717B632B,
 	Category_getVector_mF84A66426BB02A24EE696A4A399CBA29A97E93D0,
 	Category_findAlternates_mA080853CE98D1965537121FD64E914CAB3B90BA1,
 	Category_getCurrentModel_m8F1A291763E1E437C5C4AFC18E6D031911C73BE6,
@@ -100,8 +100,8 @@ static Il2CppMethodPointer s_methodPointers[25] =
 };
 static const int32_t s_InvokerIndices[25] = 
 {
-	26,
-	26,
+	136,
+	23,
 	1670,
 	28,
 	14,
