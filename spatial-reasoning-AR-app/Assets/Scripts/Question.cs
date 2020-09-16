@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Question : MonoBehaviour
 {
     public const float RANGE = 10.0f;
@@ -21,7 +22,7 @@ public class Question : MonoBehaviour
       alternateObjects = alts;
     }
 
-    public Boolean isCorrect(int x, int y, int z) {
+    public Boolean isCorrect(float x, float y, float z) {
       return withinRange(x, correctRotation.x) && withinRange(y, correctRotation.y) && withinRange(z, correctRotation.z);
     }
 
