@@ -16,10 +16,13 @@ public class Question : MonoBehaviour
       correctRotation = vec;
     }
 
-    public Question(String objName, Vector3 vec, GameObject[] alts) {
+    public Question(String objName, Vector3 vec, String[] alts) {
       model = (GameObject)Resources.Load(objName);
       correctRotation = vec;
-      alternateObjects = alts;
+      alternateObjects = new GameObject[alts.Length];
+      for (int i = 0; i < alts.Length; i++) {
+        alternateObjects[i] = (GameObject)Resources.Load(alts[i]);
+      }
     }
 
     public Boolean isCorrect(float x, float y, float z) {
