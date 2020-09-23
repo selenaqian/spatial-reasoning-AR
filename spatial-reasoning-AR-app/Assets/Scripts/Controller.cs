@@ -130,6 +130,7 @@ public class Controller : MonoBehaviour
           Debug.Log("correct rotation! " + currentRotation.eulerAngles);
           if(rotations.nextQuestion() > 0) {
             createNewCurrent();
+            createNewPrompt();
           }
         }
       }

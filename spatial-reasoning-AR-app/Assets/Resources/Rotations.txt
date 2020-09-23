@@ -1,1 +1,1 @@
-{"allData":[{"model": "tutorial", "correctRotation": "0,0,0", "range":10.0}], "currentQuestion": 0}
+{"allData":[{"model": "tutorial", "correctRotation": "350,10,0", "range":10.0}, {"model": "tutorial", "correctRotation": "0,90,300", "range":10.0}, {"model": "tutorial", "correctRotation": "0,180,270", "range":10.0}], "currentQuestion": 0}

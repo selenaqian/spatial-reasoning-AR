@@ -17,7 +17,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/MainQuestions.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -61,11 +61,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11590}
+      Script: {instanceID: 11588}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 11724}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 11758}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -411,7 +411,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4a7f800e03362783afdef7332397b675
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -693,5 +693,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 9
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/me/Documents/Duke/10 Fall 2020/Independent Study/spatial-reasoning-AR/spatial-reasoning-AR-app/one-question
+  - Assets/Scenes/MainQuestions.unity
+  playerPath: /Users/me/Documents/Duke/10 Fall 2020/Independent Study/spatial-reasoning-AR/spatial-reasoning-AR-app/multiple-with-prompt

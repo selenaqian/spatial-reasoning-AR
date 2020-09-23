@@ -2,6 +2,8 @@
 /one-question/Libraries/libil2cpp.a
 /test/Libraries/libiPhone-lib.a
 /test/Libraries/libil2cpp.a
+/multiple-with-prompt/Libraries/libiPhone-lib.a
+/multiple-with-prompt/Libraries/libil2cpp.a
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
