@@ -44,4 +44,8 @@ public class Question
     public String getModel() {
       return model;
     }
+
+    public Quaternion getCorrectRotation() {
+      return Quaternion.Euler(correctRotation);
+    }
 }

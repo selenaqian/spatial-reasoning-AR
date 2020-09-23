@@ -24,7 +24,14 @@ public class Controller : MonoBehaviour
     GameObject current;
     Vector3 currentPosition;
     Quaternion currentRotation;
+    GameObject prompt;
+    GameObject previousPrompt;
+    public Camera arCamera;
 
+    /**
+    * Loads questions from data file.
+    * Sets myTrackedImageManager to the component on the AR Session Origin.
+    */
     void Awake()
     {
       rotations = JsonUtility.FromJson<Category>(Resources.Load<TextAsset>(ROTATIONS_JSON).ToString());
@@ -32,6 +39,8 @@ public class Controller : MonoBehaviour
       myTrackedImageManager  = GetComponent<ARTrackedImageManager>();
       current = null;
       previous = null;
+      prompt = null;
+      previousPrompt = null;
     }
 
     void OnEnable()
@@ -44,6 +53,12 @@ public class Controller : MonoBehaviour
         myTrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
+    /**
+    * Gets position and rotation of tracked image, updates current model to new if needed,
+    * updates position and location of model based on tracked image. Also calls the
+    * correctness checker - but this will be changed //TODO: likely make checkCorrect a public method
+    * for use when a button is clicked in UI.
+    */
     private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
         foreach (var trackedImage in eventArgs.updated) {
@@ -53,19 +68,24 @@ public class Controller : MonoBehaviour
           if (trackedImage.trackingState == TrackingState.Tracking) {
             Debug.Log("tracking");
             if(current == null || current.name != rotations.getCurrentModel()) {
-              updateCurrent();
+              //TODO: doing some odd things I think with how often it's updating
+              // check if updating is happening when current is the correct thing
+              createNewCurrent();
+              createNewPrompt();
             }
+            updateCurrentPosition();
+            updatePromptPosition();
             checkCorrect();
           }
         }
       }
 
-      private void updateCurrent() {
+      private void createNewCurrent() {
         Debug.Log("creating new");
         Debug.Log("current model:" + rotations.getCurrentModel());
-        GameObject intermediate = Resources.Load(rotations.getCurrentModel()) as GameObject;
-        Debug.Log("intermediate: " + intermediate);
-        current = Instantiate(intermediate);
+        GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
+        Debug.Log("temp: " + temp);
+        current = Instantiate(temp);
 
         if (previous!= null && previous != current) {
           previous.SetActive(false);
@@ -73,6 +93,28 @@ public class Controller : MonoBehaviour
 
         current.SetActive(true);
         previous = current;
+      }
+
+      private void createNewPrompt() {
+        GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
+        Debug.Log("temp: " + temp);
+        prompt = Instantiate(temp);
+        prompt.transform.rotation = rotations.getCurrentCorrectRotation();
+
+        if (previousPrompt!= null && previousPrompt != current) {
+          previousPrompt.SetActive(false);
+        }
+
+        prompt.SetActive(true);
+        previousPrompt = prompt;
+      }
+
+      private void updatePromptPosition() {
+        Vector3 desiredLocation = new Vector3(0.5f,0.8f,0.25f);
+        prompt.transform.position = arCamera.GetComponent<Camera>().ViewportToWorldPoint(desiredLocation);
+      }
+
+      private void updateCurrentPosition() {
         current.transform.position = currentPosition;
         current.transform.rotation = currentRotation;
         Debug.Log(currentRotation.eulerAngles);
@@ -82,7 +124,7 @@ public class Controller : MonoBehaviour
         if(rotations.isCorrect(current)) {
           Debug.Log("correct rotation! " + currentRotation.eulerAngles);
           if(rotations.nextQuestion() > 0) {
-            updateCurrent();
+            createNewCurrent();
           }
         }
       }

@@ -53,6 +53,10 @@ public class Category
       return allData[currentQuestion].getModel();
     }
 
+    public Quaternion getCurrentCorrectRotation() {
+      return allData[currentQuestion].getCorrectRotation();
+    }
+
     public int nextQuestion() {
       currentQuestion++;
       if (currentQuestion >= allData.Length) {
