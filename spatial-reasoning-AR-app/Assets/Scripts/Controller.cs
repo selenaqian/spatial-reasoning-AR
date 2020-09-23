@@ -101,6 +101,11 @@ public class Controller : MonoBehaviour
         prompt = Instantiate(temp);
         prompt.transform.rotation = rotations.getCurrentCorrectRotation();
 
+        //TODO: doesn't seem to be working
+        Color translucent = prompt.GetComponent<MeshRenderer>().material.color;
+        translucent.a = 0.5f;
+        prompt.GetComponent<MeshRenderer>().material.color = translucent;
+
         if (previousPrompt!= null && previousPrompt != current) {
           previousPrompt.SetActive(false);
         }
