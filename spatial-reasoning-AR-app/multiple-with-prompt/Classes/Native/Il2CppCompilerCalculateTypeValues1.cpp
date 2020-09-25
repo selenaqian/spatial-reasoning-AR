@@ -387,15 +387,6 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t2A7F258263D7FCABE550B20934E57EF745D92063 
-{
-public:
-
-public:
-};
-
-
-// <Module>
 struct  U3CModuleU3E_t6CDDDF959E7E18A6744E43B613F41CDAC780256A 
 {
 public:
@@ -405,7 +396,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_tC67A5EC9770A65C5DCFEB2916D4DB35BB97F7FDB 
+struct  U3CModuleU3E_tAA355D8AE5C7E9492E77ED0BEF24E3CD28D275D9 
 {
 public:
 
@@ -414,52 +405,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_tB308A2384DEB86F8845A4E61970976B8944B5DC4 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_t8276593D2182AD0E8D12AF6BAFC4DCCD5C1DB6C1 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_t2FBFFC67F8D6B1FA13284515F9BBD8C9333B5C86 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_tF8A948C14EE892A95D0E0992A0BE6B176FF2DA1D 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_tD4E2C466946EFCC911763D21CD7F606F5D963632 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_t93DCC9DD64AD0C36686B88FC177EB2212081BDB5 
+struct  U3CModuleU3E_t2A7F258263D7FCABE550B20934E57EF745D92063 
 {
 public:
 
@@ -477,7 +423,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_tCD4309F8DDA0F37A98DBCDFE49F6C8F300C242B0 
+struct  U3CModuleU3E_tF8A948C14EE892A95D0E0992A0BE6B176FF2DA1D 
 {
 public:
 
@@ -495,7 +441,61 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_tAA355D8AE5C7E9492E77ED0BEF24E3CD28D275D9 
+struct  U3CModuleU3E_tCD4309F8DDA0F37A98DBCDFE49F6C8F300C242B0 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_t2FBFFC67F8D6B1FA13284515F9BBD8C9333B5C86 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_t8276593D2182AD0E8D12AF6BAFC4DCCD5C1DB6C1 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_tB308A2384DEB86F8845A4E61970976B8944B5DC4 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_tD4E2C466946EFCC911763D21CD7F606F5D963632 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_tC67A5EC9770A65C5DCFEB2916D4DB35BB97F7FDB 
+{
+public:
+
+public:
+};
+
+
+// <Module>
+struct  U3CModuleU3E_t93DCC9DD64AD0C36686B88FC177EB2212081BDB5 
 {
 public:
 
@@ -540,6 +540,57 @@ public:
 	inline void set_currentQuestion_1(int32_t value)
 	{
 		___currentQuestion_1 = value;
+	}
+};
+
+
+// Question
+struct  Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC  : public RuntimeObject
+{
+public:
+	// System.String Question::model
+	String_t* ___model_0;
+	// System.String Question::correctRotation
+	String_t* ___correctRotation_1;
+	// System.Single Question::range
+	float ___range_2;
+	// System.String[] Question::alternateObjects
+	StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* ___alternateObjects_3;
+
+public:
+	inline static int32_t get_offset_of_model_0() { return static_cast<int32_t>(offsetof(Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC, ___model_0)); }
+	inline String_t* get_model_0() const { return ___model_0; }
+	inline String_t** get_address_of_model_0() { return &___model_0; }
+	inline void set_model_0(String_t* value)
+	{
+		___model_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___model_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_correctRotation_1() { return static_cast<int32_t>(offsetof(Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC, ___correctRotation_1)); }
+	inline String_t* get_correctRotation_1() const { return ___correctRotation_1; }
+	inline String_t** get_address_of_correctRotation_1() { return &___correctRotation_1; }
+	inline void set_correctRotation_1(String_t* value)
+	{
+		___correctRotation_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___correctRotation_1), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_range_2() { return static_cast<int32_t>(offsetof(Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC, ___range_2)); }
+	inline float get_range_2() const { return ___range_2; }
+	inline float* get_address_of_range_2() { return &___range_2; }
+	inline void set_range_2(float value)
+	{
+		___range_2 = value;
+	}
+
+	inline static int32_t get_offset_of_alternateObjects_3() { return static_cast<int32_t>(offsetof(Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC, ___alternateObjects_3)); }
+	inline StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* get_alternateObjects_3() const { return ___alternateObjects_3; }
+	inline StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E** get_address_of_alternateObjects_3() { return &___alternateObjects_3; }
+	inline void set_alternateObjects_3(StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* value)
+	{
+		___alternateObjects_3 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___alternateObjects_3), (void*)value);
 	}
 };
 
@@ -5239,56 +5290,6 @@ public:
 	inline void set_E71745173A7642DD0A2F02658DF856A598E8FB2E_0(__StaticArrayInitTypeSizeU3D32_t0750373EFB20BE701FC01F367E7712D8185D87F2  value)
 	{
 		___E71745173A7642DD0A2F02658DF856A598E8FB2E_0 = value;
-	}
-};
-
-
-// Question
-struct  Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC  : public RuntimeObject
-{
-public:
-	// System.String Question::model
-	String_t* ___model_0;
-	// UnityEngine.Vector3 Question::correctRotation
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___correctRotation_1;
-	// System.Single Question::range
-	float ___range_2;
-	// System.String[] Question::alternateObjects
-	StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* ___alternateObjects_3;
-
-public:
-	inline static int32_t get_offset_of_model_0() { return static_cast<int32_t>(offsetof(Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC, ___model_0)); }
-	inline String_t* get_model_0() const { return ___model_0; }
-	inline String_t** get_address_of_model_0() { return &___model_0; }
-	inline void set_model_0(String_t* value)
-	{
-		___model_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___model_0), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_correctRotation_1() { return static_cast<int32_t>(offsetof(Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC, ___correctRotation_1)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_correctRotation_1() const { return ___correctRotation_1; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_correctRotation_1() { return &___correctRotation_1; }
-	inline void set_correctRotation_1(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
-	{
-		___correctRotation_1 = value;
-	}
-
-	inline static int32_t get_offset_of_range_2() { return static_cast<int32_t>(offsetof(Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC, ___range_2)); }
-	inline float get_range_2() const { return ___range_2; }
-	inline float* get_address_of_range_2() { return &___range_2; }
-	inline void set_range_2(float value)
-	{
-		___range_2 = value;
-	}
-
-	inline static int32_t get_offset_of_alternateObjects_3() { return static_cast<int32_t>(offsetof(Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC, ___alternateObjects_3)); }
-	inline StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* get_alternateObjects_3() const { return ___alternateObjects_3; }
-	inline StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E** get_address_of_alternateObjects_3() { return &___alternateObjects_3; }
-	inline void set_alternateObjects_3(StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* value)
-	{
-		___alternateObjects_3 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___alternateObjects_3), (void*)value);
 	}
 };
 

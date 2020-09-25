@@ -64,10 +64,10 @@ extern void printRotation_Update_m960B13582126514789842D5659D7D88108F3AB93 ();
 extern void printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D ();
 // 0x00000016 System.Void printRotation::.ctor()
 extern void printRotation__ctor_mEF442B757E830186A1DE24E07E57DB1377286A3C ();
-// 0x00000017 System.Void Question::.ctor(System.String,UnityEngine.Vector3)
-extern void Question__ctor_mFD8FFA9C6D38A77899739EDC0172C76B3220FC95 ();
-// 0x00000018 System.Void Question::.ctor(System.String,UnityEngine.Vector3,System.String[])
-extern void Question__ctor_mF8E347DD5B173EF9BC280886865FD3299638504D ();
+// 0x00000017 System.Void Question::.ctor(System.String,System.String)
+extern void Question__ctor_m7D2DA32873E812741E5A2A004CB0BD95CDE2F249 ();
+// 0x00000018 System.Void Question::.ctor(System.String,System.String,System.String[])
+extern void Question__ctor_m2FFAF790585683E2423CD763A6D544426D44A77A ();
 // 0x00000019 System.Boolean Question::isCorrect(System.Single,System.Single,System.Single)
 extern void Question_isCorrect_m6344EB5322DFDEB867A07D166ED06BF2225DBCD1 ();
 // 0x0000001A System.Boolean Question::withinRange(System.Single,System.Single)
@@ -76,7 +76,9 @@ extern void Question_withinRange_mDAABFFA72A6E0E22F73E9131EF07C9726C986C10 ();
 extern void Question_getModel_m25260197309ECDBB34C421A200D49E3C64511179 ();
 // 0x0000001C UnityEngine.Quaternion Question::getCorrectRotation()
 extern void Question_getCorrectRotation_m5FD76508542E1B6B8CF96969BCCBC3172A39191B ();
-static Il2CppMethodPointer s_methodPointers[28] = 
+// 0x0000001D UnityEngine.Vector3 Question::stringToVector(System.String)
+extern void Question_stringToVector_m5D3FA51B95B3B7A53151B8C135B88A1912CE9717 ();
+static Il2CppMethodPointer s_methodPointers[29] = 
 {
 	Category__ctor_m0B0BFF8AA9775662A06F92F02E2C0BED82C152CF,
 	Category__ctor_mD0975E34D2A70F6F461D35938B64928A717B632B,
@@ -100,14 +102,15 @@ static Il2CppMethodPointer s_methodPointers[28] =
 	printRotation_Update_m960B13582126514789842D5659D7D88108F3AB93,
 	printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D,
 	printRotation__ctor_mEF442B757E830186A1DE24E07E57DB1377286A3C,
-	Question__ctor_mFD8FFA9C6D38A77899739EDC0172C76B3220FC95,
-	Question__ctor_mF8E347DD5B173EF9BC280886865FD3299638504D,
+	Question__ctor_m7D2DA32873E812741E5A2A004CB0BD95CDE2F249,
+	Question__ctor_m2FFAF790585683E2423CD763A6D544426D44A77A,
 	Question_isCorrect_m6344EB5322DFDEB867A07D166ED06BF2225DBCD1,
 	Question_withinRange_mDAABFFA72A6E0E22F73E9131EF07C9726C986C10,
 	Question_getModel_m25260197309ECDBB34C421A200D49E3C64511179,
 	Question_getCorrectRotation_m5FD76508542E1B6B8CF96969BCCBC3172A39191B,
+	Question_stringToVector_m5D3FA51B95B3B7A53151B8C135B88A1912CE9717,
 };
-static const int32_t s_InvokerIndices[28] = 
+static const int32_t s_InvokerIndices[29] = 
 {
 	136,
 	23,
@@ -131,18 +134,19 @@ static const int32_t s_InvokerIndices[28] =
 	23,
 	23,
 	23,
-	1601,
+	27,
+	168,
 	1679,
 	1680,
-	1681,
 	14,
 	1257,
+	1681,
 };
 extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	28,
+	29,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,
