@@ -18,23 +18,24 @@ using UnityEngine;
 public class Question
 {
     public String model;
-    public Vector3 correctRotation;
+    public String correctRotation;
     public float range;
     public String[] alternateObjects;
 
-    public Question(String objName, Vector3 vec) {
+    public Question(String objName, String vec) {
       model = objName;
       correctRotation = vec;
     }
 
-    public Question(String objName, Vector3 vec, String[] alts) {
+    public Question(String objName, String vec, String[] alts) {
       model = objName;
       correctRotation = vec;
       alternateObjects = alts;
     }
 
     public Boolean isCorrect(float x, float y, float z) {
-      return withinRange(x, correctRotation.x) && withinRange(y, correctRotation.y) && withinRange(z, correctRotation.z);
+      Vector3 correctRotationVector = stringToVector(correctRotation);
+      return withinRange(x, correctRotationVector.x) && withinRange(y, correctRotationVector.y) && withinRange(z, correctRotationVector.z);
     }
 
     private Boolean withinRange(float current, float desired) {
@@ -46,6 +47,14 @@ public class Question
     }
 
     public Quaternion getCorrectRotation() {
-      return Quaternion.Euler(correctRotation);
+      Vector3 correctRotationVector = stringToVector(correctRotation);
+      Debug.Log("rotation vector: " + correctRotationVector);
+      return Quaternion.Euler(correctRotationVector);
+    }
+
+    public static Vector3 stringToVector(String str) {
+      Debug.Log("converting string to vector");
+      String[] strArray = str.Split(',');
+      return new Vector3(float.Parse(strArray[0]), float.Parse(strArray[1]), float.Parse(strArray[2]));
     }
 }

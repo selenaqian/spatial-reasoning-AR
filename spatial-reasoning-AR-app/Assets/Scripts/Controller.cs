@@ -67,9 +67,14 @@ public class Controller : MonoBehaviour
           /* If an image is properly tracked */
           if (trackedImage.trackingState == TrackingState.Tracking) {
             Debug.Log("tracking");
-            if(current == null || current.name != rotations.getCurrentModel()) {
+            if(current == null || !current.name.Equals(rotations.getCurrentModel())) {
               //TODO: doing some odd things I think with how often it's updating
               // check if updating is happening when current is the correct thing
+              if (current==null) Debug.Log("current null");
+              else {
+                Debug.Log("current not correct name");
+                Debug.Log("current name: " + current.name + "needed name: " + rotations.getCurrentModel());
+              }
               createNewCurrent();
               createNewPrompt();
             }
@@ -84,8 +89,9 @@ public class Controller : MonoBehaviour
         Debug.Log("creating new");
         Debug.Log("current model:" + rotations.getCurrentModel());
         GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
-        Debug.Log("temp: " + temp);
+        Debug.Log("temp: " + temp.name + " correct rotation: " + rotations.getCurrentCorrectRotation());
         current = Instantiate(temp);
+        current.name = rotations.getCurrentModel(); // the name was tutorial(Clone) instead of tutorial!
 
         if (previous!= null && previous != current) {
           previous.SetActive(false);
@@ -97,7 +103,6 @@ public class Controller : MonoBehaviour
 
       private void createNewPrompt() {
         GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
-        Debug.Log("temp: " + temp);
         prompt = Instantiate(temp);
         prompt.transform.rotation = rotations.getCurrentCorrectRotation();
 

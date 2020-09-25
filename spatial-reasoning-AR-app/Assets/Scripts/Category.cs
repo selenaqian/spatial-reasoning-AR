@@ -59,6 +59,7 @@ public class Category
 
     public int nextQuestion() {
       currentQuestion++;
+      Debug.Log(currentQuestion);
       if (currentQuestion >= allData.Length) {
         categoryComplete();
         return -1;
