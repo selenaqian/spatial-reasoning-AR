@@ -78,9 +78,12 @@ public class Category
     }
 
     public Question getCurrent() {
+      Debug.Log("getting current: " + currentQuestion + "/" + allData.Length);
       if (currentQuestion < allData.Length) {
         return allData[currentQuestion];
       }
-      else return null;
+      else {
+        return null;
+      }
     }
 }

@@ -28,9 +28,11 @@ public class Controller : MonoBehaviour
     Quaternion currentRotation;
     GameObject prompt;
     GameObject previousPrompt;
+    public TextMeshProUGUI promptText;
     public Camera arCamera;
     public Button submit;
     public TextMeshProUGUI submitText;
+    public Button beginExercises;
 
     /**
     * Loads questions from data file.
@@ -45,6 +47,8 @@ public class Controller : MonoBehaviour
       previous = null;
       prompt = null;
       previousPrompt = null;
+      submit.gameObject.SetActive(false);
+      beginExercises.gameObject.SetActive(false);
     }
 
     void OnEnable()
@@ -57,11 +61,47 @@ public class Controller : MonoBehaviour
         myTrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
+    void Update()
+    {
+      foreach(Touch touch in Input.touches) {
+        if (submitText.text.Equals("That's correct!") && rotations.nextQuestion() > 0) {
+          Debug.Log("correct, reset");
+          reset();
+          break;
+        }
+        else if (submitText.text.Equals("Incorrect. Try again!")) {
+          Debug.Log("incorrect, reset");
+          reset();
+          break;
+        }
+      }
+    }
+
+    /**
+    * Changes text of submit button back to "Submit" and changes color back to blue.
+    * Creates new current and prompt objects.
+    */
+    private void reset() {
+      submitText.text = "Submit";
+      submit.GetComponent<Image>().color = new Color(51, 152, 221);
+      createNewCurrent();
+      createNewPrompt();
+    }
+
+    /**
+    * Moves from tutorial to exercises.
+    */
+    public void begin() {
+      beginExercises.gameObject.SetActive(false);
+      submit.gameObject.SetActive(true);
+      rotations.nextQuestion();
+      reset();
+    }
+
     /**
     * Gets position and rotation of tracked image, updates current model to new if needed,
     * updates position and location of model based on tracked image. Also calls the
-    * correctness checker - but this will be changed //TODO: likely make checkCorrect a public method
-    * for use when a button is clicked in UI.
+    * correctness checker if in tutorial mode.
     */
     private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
@@ -135,13 +175,23 @@ public class Controller : MonoBehaviour
       }
 
       public void checkCorrect() {
+        Debug.Log("checking");
         if(rotations.isCorrect(current)) {
           Debug.Log("correct rotation! " + currentRotation.eulerAngles);
-          submitText.text = "That's right!";
-          if(rotations.nextQuestion() > 0) {
-            createNewCurrent();
-            createNewPrompt();
+          if (rotations.getCurrent().isTutorial()) {
+            promptText.text = "Good job!";
+            beginExercises.gameObject.SetActive(true);
+            //This currently assumes only 1 tutorial object. Would need to add in a checker of some sort for more tutorial objects if have multiple.
           }
+          else {
+            submitText.text = "That's right!";
+            submit.GetComponent<Image>().color = new Color(33, 202, 35);
+          }
+        }
+        else {
+          Debug.Log("incorrect");
+          submitText.text = "Incorrect. Try again!";
+          submit.GetComponent<Image>().color = new Color(227, 57, 55);
         }
       }
 }
