@@ -16,6 +16,7 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.EventSystems;
 
 public class Controller : MonoBehaviour
 {
@@ -64,7 +65,10 @@ public class Controller : MonoBehaviour
     void Update()
     {
       foreach(Touch touch in Input.touches) {
-        if (submitText.text.Equals("That's correct!") && rotations.nextQuestion() > 0) {
+        if (IsPointerOverUIObject()) {
+          return;
+        }
+        if (submitText.text.Equals("That's right!") && rotations.nextQuestion() > 0) {
           Debug.Log("correct, reset");
           reset();
           break;
@@ -77,13 +81,23 @@ public class Controller : MonoBehaviour
       }
     }
 
+    // from: https://answers.unity.com/questions/1469696/ui-button-and-touch-input-conflict.html
+    private bool IsPointerOverUIObject() {
+     PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+     eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+     List<RaycastResult> results = new List<RaycastResult>();
+     EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+     return results.Count > 0;
+   }
+
     /**
     * Changes text of submit button back to "Submit" and changes color back to blue.
     * Creates new current and prompt objects.
     */
     private void reset() {
       submitText.text = "Submit";
-      submit.GetComponent<Image>().color = new Color(51, 152, 221);
+      submit.GetComponent<Image>().color = Color.blue;
+      promptText.text = "Rotate the object to match."; // TODO: make this part of the Question class and txt file
       createNewCurrent();
       createNewPrompt();
     }
@@ -111,6 +125,9 @@ public class Controller : MonoBehaviour
           /* If an image is properly tracked */
           if (trackedImage.trackingState == TrackingState.Tracking) {
             Debug.Log("tracking");
+            if (promptText.text.Equals("Point camera at Rotations lesson card.")) {
+              promptText.text = "Practice rotating the object to match!"; //TODO: also fix this so it's not a magic value
+            }
             if(current == null || !current.name.Equals(rotations.getCurrentModel())) {
               if (current==null) Debug.Log("current null");
               else {
@@ -185,13 +202,13 @@ public class Controller : MonoBehaviour
           }
           else {
             submitText.text = "That's right!";
-            submit.GetComponent<Image>().color = new Color(33, 202, 35);
+            submit.GetComponent<Image>().color = Color.green;
           }
         }
         else {
           Debug.Log("incorrect");
           submitText.text = "Incorrect. Try again!";
-          submit.GetComponent<Image>().color = new Color(227, 57, 55);
+          submit.GetComponent<Image>().color = Color.red;
         }
       }
 }
