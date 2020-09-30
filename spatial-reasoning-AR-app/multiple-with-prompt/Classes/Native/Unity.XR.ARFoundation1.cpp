@@ -66,7 +66,7 @@ struct Dictionary_2_t9780DA231BA452BFBD83FA24408472862BDD8A9F;
 // System.Collections.Generic.HashSet`1/Slot<UnityEngine.Experimental.XR.TrackableId>[]
 struct SlotU5BU5D_t7606679AFC94A9C264B06E88696155019DD0172B;
 // System.Collections.Generic.HashSet`1<System.Object>
-struct HashSet_1_t20C647F44B285CB7C061931B00ED43A230F311E5;
+struct HashSet_1_tCB9A93E0664C5F2540DB06B45AEF3605389EFF8E;
 // System.Collections.Generic.HashSet`1<UnityEngine.Experimental.XR.TrackableId>
 struct HashSet_1_t46CBD5E236B1CCC32C5AD60B818E2AE07AF6F05F;
 // System.Collections.Generic.HashSet`1<UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystem>
@@ -4275,7 +4275,7 @@ public:
 	// System.Collections.Generic.List`1<TSubsystem> UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`2::s_SubsystemInstances
 	List_1_t05CC3C859AB5E6024394EF9A42E3E696628CA02D * ___s_SubsystemInstances_7;
 	// System.Collections.Generic.HashSet`1<TSubsystem> UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`2::s_DestroyedSubsystemTypes
-	HashSet_1_t20C647F44B285CB7C061931B00ED43A230F311E5 * ___s_DestroyedSubsystemTypes_8;
+	HashSet_1_tCB9A93E0664C5F2540DB06B45AEF3605389EFF8E * ___s_DestroyedSubsystemTypes_8;
 
 public:
 	inline static int32_t get_offset_of_s_SubsystemDescriptors_6() { return static_cast<int32_t>(offsetof(SubsystemLifecycleManager_2_t5D1A501CD473D1DB7DD9763711AFE091EA6665C9_StaticFields, ___s_SubsystemDescriptors_6)); }
@@ -4297,9 +4297,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_s_DestroyedSubsystemTypes_8() { return static_cast<int32_t>(offsetof(SubsystemLifecycleManager_2_t5D1A501CD473D1DB7DD9763711AFE091EA6665C9_StaticFields, ___s_DestroyedSubsystemTypes_8)); }
-	inline HashSet_1_t20C647F44B285CB7C061931B00ED43A230F311E5 * get_s_DestroyedSubsystemTypes_8() const { return ___s_DestroyedSubsystemTypes_8; }
-	inline HashSet_1_t20C647F44B285CB7C061931B00ED43A230F311E5 ** get_address_of_s_DestroyedSubsystemTypes_8() { return &___s_DestroyedSubsystemTypes_8; }
-	inline void set_s_DestroyedSubsystemTypes_8(HashSet_1_t20C647F44B285CB7C061931B00ED43A230F311E5 * value)
+	inline HashSet_1_tCB9A93E0664C5F2540DB06B45AEF3605389EFF8E * get_s_DestroyedSubsystemTypes_8() const { return ___s_DestroyedSubsystemTypes_8; }
+	inline HashSet_1_tCB9A93E0664C5F2540DB06B45AEF3605389EFF8E ** get_address_of_s_DestroyedSubsystemTypes_8() { return &___s_DestroyedSubsystemTypes_8; }
+	inline void set_s_DestroyedSubsystemTypes_8(HashSet_1_tCB9A93E0664C5F2540DB06B45AEF3605389EFF8E * value)
 	{
 		___s_DestroyedSubsystemTypes_8 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___s_DestroyedSubsystemTypes_8), (void*)value);
@@ -4776,7 +4776,7 @@ IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int32_t Promise_1_get_result_m369355E1
 // !0 UnityEngine.Subsystem`1<System.Object>::get_SubsystemDescriptor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * Subsystem_1_get_SubsystemDescriptor_mA35B9EF0D8FB264CBDA2C501B3C251816226A412_gshared (Subsystem_1_t730D4B66354D4BECD6DEDE1050EA133DF9B7A61F * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * Component_GetComponent_TisRuntimeObject_m129DEF8A66683189ED44B21496135824743EF617_gshared (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method);
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * Component_GetComponent_TisRuntimeObject_m15E3130603CE5400743CCCDEE7600FB9EEFAE5C0_gshared (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method);
 // TSessionRelativeData UnityEngine.XR.ARFoundation.ARTrackable`2<UnityEngine.XR.ARSubsystems.XRTrackedImage,System.Object>::get_sessionRelativeData()
 IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR XRTrackedImage_t178EACF5BFA4228DF4EB1899685C533F3F296AA8  ARTrackable_2_get_sessionRelativeData_mA454C5DD43D32A64A6526FC1B12B3D6DD698AB44_gshared_inline (ARTrackable_2_tDC22DD8BD2173402258A323598A3378BE19FACCB * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.ARFoundation.ARTrackable`2<UnityEngine.XR.ARSubsystems.XRTrackedImage,System.Object>::.ctor()
@@ -4968,7 +4968,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Implicit_m8B2A44B4B1406ED346D1
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.XR.ARFoundation.ARPoseDriver>()
 inline ARPoseDriver_t219BF1F207FB03B6D79798689F2706B25A4175BC * Component_GetComponent_TisARPoseDriver_t219BF1F207FB03B6D79798689F2706B25A4175BC_m529008D2F474C7E3C41D692EF7724A6C40519596 (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method)
 {
-	return ((  ARPoseDriver_t219BF1F207FB03B6D79798689F2706B25A4175BC * (*) (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m129DEF8A66683189ED44B21496135824743EF617_gshared)(__this, method);
+	return ((  ARPoseDriver_t219BF1F207FB03B6D79798689F2706B25A4175BC * (*) (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m15E3130603CE5400743CCCDEE7600FB9EEFAE5C0_gshared)(__this, method);
 }
 // System.String UnityEngine.Object::get_name()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_get_name_mA2D400141CB3C991C87A2556429781DE961A83CE (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * __this, const RuntimeMethod* method);
