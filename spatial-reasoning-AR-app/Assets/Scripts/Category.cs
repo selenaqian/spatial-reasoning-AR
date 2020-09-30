@@ -76,4 +76,11 @@ public class Category
       Vector3 rotation = obj.transform.rotation.eulerAngles;
       return allData[currentQuestion].isCorrect(rotation.x, rotation.y, rotation.z);
     }
+
+    public Question getCurrent() {
+      if (currentQuestion < allData.Length) {
+        return allData[currentQuestion];
+      }
+      else return null;
+    }
 }

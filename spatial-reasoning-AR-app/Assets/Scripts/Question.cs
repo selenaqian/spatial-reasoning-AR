@@ -21,6 +21,7 @@ public class Question
     public String correctRotation;
     public float range;
     public String[] alternateObjects;
+    public String type;
 
     public Question(String objName, String vec) {
       model = objName;
@@ -56,5 +57,9 @@ public class Question
       Debug.Log("converting string to vector");
       String[] strArray = str.Split(',');
       return new Vector3(float.Parse(strArray[0]), float.Parse(strArray[1]), float.Parse(strArray[2]));
+    }
+
+    public Boolean isTutorial() {
+      return type.Equals("tutorial");
     }
 }

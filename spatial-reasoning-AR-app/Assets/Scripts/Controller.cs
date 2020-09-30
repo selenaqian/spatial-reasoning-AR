@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.UI;
+using TMPro;
 using System;
 
 public class Controller : MonoBehaviour
@@ -27,6 +29,8 @@ public class Controller : MonoBehaviour
     GameObject prompt;
     GameObject previousPrompt;
     public Camera arCamera;
+    public Button submit;
+    public TextMeshProUGUI submitText;
 
     /**
     * Loads questions from data file.
@@ -68,8 +72,6 @@ public class Controller : MonoBehaviour
           if (trackedImage.trackingState == TrackingState.Tracking) {
             Debug.Log("tracking");
             if(current == null || !current.name.Equals(rotations.getCurrentModel())) {
-              //TODO: doing some odd things I think with how often it's updating
-              // check if updating is happening when current is the correct thing
               if (current==null) Debug.Log("current null");
               else {
                 Debug.Log("current not correct name");
@@ -80,7 +82,9 @@ public class Controller : MonoBehaviour
             }
             updateCurrentPosition();
             updatePromptPosition();
-            checkCorrect();
+            if (rotations.getCurrent().isTutorial()) {
+              checkCorrect();
+            }
           }
         }
       }
@@ -130,19 +134,14 @@ public class Controller : MonoBehaviour
         Debug.Log(currentRotation.eulerAngles);
       }
 
-      private void checkCorrect() {
+      public void checkCorrect() {
         if(rotations.isCorrect(current)) {
           Debug.Log("correct rotation! " + currentRotation.eulerAngles);
+          submitText.text = "That's right!";
           if(rotations.nextQuestion() > 0) {
             createNewCurrent();
             createNewPrompt();
           }
         }
       }
-
-    /** functions:
-    * check if correctRotation
-      * change question number
-      * update prefab for TrackedImageManager based on question number
-    */
 }
