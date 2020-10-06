@@ -169,7 +169,9 @@ public class Controller : MonoBehaviour
 
         //TODO: doesn't seem to be working
         Color translucent = prompt.GetComponent<MeshRenderer>().material.color;
+        Debug.Log("mesh: " + prompt.GetComponent<MeshRenderer>() + ", material: " + prompt.GetComponent<MeshRenderer>().material + ", color: " + prompt.GetComponent<MeshRenderer>().material.color);
         translucent.a = 0.5f;
+        Debug.Log("translucent: " + translucent);
         prompt.GetComponent<MeshRenderer>().material.color = translucent;
 
         if (previousPrompt!= null && previousPrompt != current) {
