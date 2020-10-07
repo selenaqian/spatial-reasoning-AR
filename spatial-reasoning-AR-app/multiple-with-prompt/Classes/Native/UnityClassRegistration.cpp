@@ -9,6 +9,9 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_Animation();
 	RegisterModule_Animation();
 
+	void RegisterModule_Audio();
+	RegisterModule_Audio();
+
 	void RegisterModule_ParticleSystem();
 	RegisterModule_ParticleSystem();
 
@@ -33,12 +36,6 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_JSONSerialize();
 	RegisterModule_JSONSerialize();
 
-	void RegisterModule_Input();
-	RegisterModule_Input();
-
-	void RegisterModule_XR();
-	RegisterModule_XR();
-
 	void RegisterModule_UnityWebRequest();
 	RegisterModule_UnityWebRequest();
 
@@ -50,6 +47,12 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 
 	void RegisterModule_TextCore();
 	RegisterModule_TextCore();
+
+	void RegisterModule_Input();
+	RegisterModule_Input();
+
+	void RegisterModule_XR();
+	RegisterModule_XR();
 
 	void RegisterModule_TLS();
 	RegisterModule_TLS();
@@ -74,8 +77,8 @@ namespace Unity { class Component; } template <> void RegisterUnityClass<Unity::
 class Behaviour; template <> void RegisterUnityClass<Behaviour>(const char*);
 class Animation; 
 class Animator; template <> void RegisterUnityClass<Animator>(const char*);
-class AudioBehaviour; 
-class AudioListener; 
+class AudioBehaviour; template <> void RegisterUnityClass<AudioBehaviour>(const char*);
+class AudioListener; template <> void RegisterUnityClass<AudioListener>(const char*);
 class AudioSource; 
 class AudioFilter; 
 class AudioChorusFilter; 
@@ -259,7 +262,7 @@ class VisualEffectSubgraph;
 class EmptyObject; 
 class GameManager; template <> void RegisterUnityClass<GameManager>(const char*);
 class GlobalGameManager; template <> void RegisterUnityClass<GlobalGameManager>(const char*);
-class AudioManager; 
+class AudioManager; template <> void RegisterUnityClass<AudioManager>(const char*);
 class BuildSettings; template <> void RegisterUnityClass<BuildSettings>(const char*);
 class DelayedCallManager; template <> void RegisterUnityClass<DelayedCallManager>(const char*);
 class GraphicsSettings; template <> void RegisterUnityClass<GraphicsSettings>(const char*);
@@ -300,7 +303,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 69 non stripped classes
+	//Total: 72 non stripped classes
 	//0. Camera
 	RegisterUnityClass<Camera>("Core");
 	//1. Behaviour
@@ -405,39 +408,45 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<MonoScript>("Core");
 	//51. UnityConnectSettings
 	RegisterUnityClass<UnityConnectSettings>("UnityConnect");
-	//52. PlayerSettings
+	//52. AudioManager
+	RegisterUnityClass<AudioManager>("Audio");
+	//53. PlayerSettings
 	RegisterUnityClass<PlayerSettings>("Core");
-	//53. PhysicsManager
+	//54. PhysicsManager
 	RegisterUnityClass<PhysicsManager>("Physics");
-	//54. TimeManager
+	//55. TimeManager
 	RegisterUnityClass<TimeManager>("Core");
-	//55. InputManager
+	//56. InputManager
 	RegisterUnityClass<InputManager>("Core");
-	//56. TagManager
+	//57. TagManager
 	RegisterUnityClass<TagManager>("Core");
-	//57. DelayedCallManager
+	//58. DelayedCallManager
 	RegisterUnityClass<DelayedCallManager>("Core");
-	//58. BuildSettings
+	//59. BuildSettings
 	RegisterUnityClass<BuildSettings>("Core");
-	//59. RuntimeInitializeOnLoadManager
+	//60. RuntimeInitializeOnLoadManager
 	RegisterUnityClass<RuntimeInitializeOnLoadManager>("Core");
-	//60. ResourceManager
+	//61. ResourceManager
 	RegisterUnityClass<ResourceManager>("Core");
-	//61. ScriptMapper
+	//62. ScriptMapper
 	RegisterUnityClass<ScriptMapper>("Core");
-	//62. MonoManager
+	//63. MonoManager
 	RegisterUnityClass<MonoManager>("Core");
-	//63. LightProbes
-	RegisterUnityClass<LightProbes>("Core");
-	//64. CGProgram
+	//64. AudioBehaviour
+	RegisterUnityClass<AudioBehaviour>("Audio");
+	//65. AudioListener
+	RegisterUnityClass<AudioListener>("Audio");
+	//66. CGProgram
 	RegisterUnityClass<CGProgram>("Core");
-	//65. LightmapSettings
+	//67. LightmapSettings
 	RegisterUnityClass<LightmapSettings>("Core");
-	//66. LevelGameManager
+	//68. LevelGameManager
 	RegisterUnityClass<LevelGameManager>("Core");
-	//67. RenderSettings
+	//69. RenderSettings
 	RegisterUnityClass<RenderSettings>("Core");
-	//68. BoxCollider
+	//70. LightProbes
+	RegisterUnityClass<LightProbes>("Core");
+	//71. BoxCollider
 	RegisterUnityClass<BoxCollider>("Physics");
 
 }

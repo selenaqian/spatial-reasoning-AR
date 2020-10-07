@@ -6,6 +6,7 @@
             "fullManagedTypeName": "UnityEngine.Material",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -15,6 +16,7 @@
             "fullManagedTypeName": "UnityEngine.Object",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -24,6 +26,7 @@
             "fullManagedTypeName": "UnityEditor.MonoScript",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -33,6 +36,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -84,6 +88,7 @@
             "fullManagedTypeName": "UnityEngine.Shader",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -93,6 +98,7 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -102,6 +108,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -139,6 +146,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -214,10 +222,29 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioBehaviour",
+            "fullManagedTypeName": "UnityEngine.AudioBehaviour",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioListener",
+            "fullManagedTypeName": "UnityEngine.AudioListener",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Renderer",
             "fullManagedTypeName": "UnityEngine.Renderer",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -227,6 +254,7 @@
             "fullManagedTypeName": "UnityEngine.Behaviour",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -236,6 +264,7 @@
             "fullManagedTypeName": "UnityEngine.Component",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -245,6 +274,7 @@
             "fullManagedTypeName": "UnityEngine.GameObject",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -254,6 +284,7 @@
             "fullManagedTypeName": "UnityEngine.Sprite",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -263,6 +294,7 @@
             "fullManagedTypeName": "UnityEngine.Texture2D",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -272,6 +304,7 @@
             "fullManagedTypeName": "UnityEngine.Texture",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -281,6 +314,7 @@
             "fullManagedTypeName": "UnityEngine.Transform",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -290,6 +324,7 @@
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -299,6 +334,7 @@
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -308,6 +344,7 @@
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -317,6 +354,7 @@
             "fullManagedTypeName": "UnityEngine.MeshFilter",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -326,6 +364,7 @@
             "fullManagedTypeName": "UnityEngine.Mesh",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -335,15 +374,7 @@
             "fullManagedTypeName": "UnityEngine.MonoBehaviour",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/MainQuestions.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "LightProbes",
-            "fullManagedTypeName": "UnityEngine.LightProbes",
-            "moduleName": "Core",
-            "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -353,6 +384,7 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -362,6 +394,7 @@
             "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -371,7 +404,7 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/SplashScreen.unity"
             ]
         },
         {
@@ -380,6 +413,7 @@
             "fullManagedTypeName": "UnityEngine.Font",
             "moduleName": "TextRendering",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -389,6 +423,7 @@
             "fullManagedTypeName": "UnityEngine.Light",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
                 "Assets/Scenes/MainQuestions.unity"
             ]
         },
@@ -396,6 +431,36 @@
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "LightmapSettings",
             "fullManagedTypeName": "UnityEngine.LightmapSettings",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
+                "Assets/Scenes/MainQuestions.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "LevelGameManager",
+            "fullManagedTypeName": "",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
+                "Assets/Scenes/MainQuestions.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "RenderSettings",
+            "fullManagedTypeName": "UnityEngine.RenderSettings",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/SplashScreen.unity",
+                "Assets/Scenes/MainQuestions.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "LightProbes",
+            "fullManagedTypeName": "UnityEngine.LightProbes",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/MainQuestions.unity"
@@ -411,27 +476,9 @@
             ]
         },
         {
-            "managedAssemblyName": "",
-            "nativeClass": "LevelGameManager",
-            "fullManagedTypeName": "",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/MainQuestions.unity"
-            ]
-        },
-        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Cubemap",
             "fullManagedTypeName": "UnityEngine.Cubemap",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/MainQuestions.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "RenderSettings",
-            "fullManagedTypeName": "UnityEngine.RenderSettings",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/MainQuestions.unity"
@@ -450,6 +497,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "Controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "sceneController",
             "moduleName": "",
             "usedInScenes": []
         },

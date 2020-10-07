@@ -163,13 +163,21 @@ public class Controller : MonoBehaviour
       }
 
       private void createNewPrompt() {
+        if (prompt != null) {
+          //prompt.SetActive(false);
+          GameObject toDestroy = prompt;
+          Debug.Log(prompt + " " + toDestroy);
+          prompt = null;
+          Destroy(toDestroy);
+          Debug.Log("prompt should be null: " + prompt);
+        }
         GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
         prompt = Instantiate(temp);
         prompt.transform.rotation = rotations.getCurrentCorrectRotation();
 
         //TODO: doesn't seem to be working
-        Color translucent = prompt.GetComponent<MeshRenderer>().material.color;
-        Debug.Log("mesh: " + prompt.GetComponent<MeshRenderer>() + ", material: " + prompt.GetComponent<MeshRenderer>().material + ", color: " + prompt.GetComponent<MeshRenderer>().material.color);
+        Color translucent = prompt.GetComponent<Renderer>().material.color;
+        Debug.Log("mesh: " + prompt.GetComponent<Renderer>() + ", material: " + prompt.GetComponent<MeshRenderer>().material + ", color: " + prompt.GetComponent<MeshRenderer>().material.color);
         translucent.a = 0.5f;
         Debug.Log("translucent: " + translucent);
         prompt.GetComponent<MeshRenderer>().material.color = translucent;
