@@ -17,6 +17,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class Controller : MonoBehaviour
     public Button submit;
     public TextMeshProUGUI submitText;
     public Button beginExercises;
+    public TextMeshProUGUI progressText;
 
     /**
     * Loads questions from data file.
@@ -68,9 +70,14 @@ public class Controller : MonoBehaviour
         if (IsPointerOverUIObject()) {
           return;
         }
-        if (submitText.text.Equals("That's right!") && rotations.nextQuestion() > 0) {
-          Debug.Log("correct, reset");
-          reset();
+        if (submitText.text.Equals("That's right!")) {
+          if (rotations.nextQuestion() > 0) {
+            Debug.Log("correct, reset");
+            reset();
+          }
+          else {
+            SceneManager.LoadScene("CategoryComplete");
+          }
           break;
         }
         else if (submitText.text.Equals("Incorrect. Try again!")) {
@@ -98,6 +105,7 @@ public class Controller : MonoBehaviour
       submitText.text = "Submit";
       submit.GetComponent<Image>().color = Color.blue;
       promptText.text = "Rotate the object to match."; // TODO: make this part of the Question class and txt file
+      progressText.text = (rotations.currentQuestion - rotations.getNumberTutorial() + 1) + " of " + rotations.getNumberExercise();
       createNewCurrent();
       createNewPrompt();
     }
@@ -164,12 +172,9 @@ public class Controller : MonoBehaviour
 
       private void createNewPrompt() {
         if (prompt != null) {
-          //prompt.SetActive(false);
           GameObject toDestroy = prompt;
           Debug.Log(prompt + " " + toDestroy);
-          prompt = null;
           Destroy(toDestroy);
-          Debug.Log("prompt should be null: " + prompt);
         }
         GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
         prompt = Instantiate(temp);

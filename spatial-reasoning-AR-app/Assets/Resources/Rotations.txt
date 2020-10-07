@@ -7,14 +7,38 @@
       "type": "tutorial"
     },
     {
-      "model": "tutorial",
-      "correctRotation": "0,90,300",
+      "model": "rotations1",
+      "correctRotation": "0,90,0",
       "range": 10,
       "type": "exercise"
     },
     {
-      "model": "tutorial",
-      "correctRotation": "0,180,270",
+      "model": "rotations1",
+      "correctRotation": "0,180,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations2",
+      "correctRotation": "0,90,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations3",
+      "correctRotation": "0,270,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations4",
+      "correctRotation": "0,90,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations5",
+      "correctRotation": "0,45,0",
       "range": 10,
       "type": "exercise"
     }

@@ -32,6 +32,57 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   sceneClasses:
+    Assets/Scenes/CategoryComplete.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9712}
+    - Class: 114
+      Script: {instanceID: 9940}
+    - Class: 114
+      Script: {instanceID: 10402}
+    - Class: 114
+      Script: {instanceID: 10886}
+    - Class: 114
+      Script: {instanceID: 11152}
+    - Class: 114
+      Script: {instanceID: 11388}
+    - Class: 114
+      Script: {instanceID: 11456}
+    - Class: 114
+      Script: {instanceID: 11914}
+    - Class: 114
+      Script: {instanceID: 24228}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/MainQuestions.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -95,6 +146,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11848}
     - Class: 114
       Script: {instanceID: 11914}
+    - Class: 114
+      Script: {instanceID: 24228}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -110,6 +163,57 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9712}
+    - Class: 114
+      Script: {instanceID: 9940}
+    - Class: 114
+      Script: {instanceID: 10402}
+    - Class: 114
+      Script: {instanceID: 10886}
+    - Class: 114
+      Script: {instanceID: 11152}
+    - Class: 114
+      Script: {instanceID: 11388}
+    - Class: 114
+      Script: {instanceID: 11456}
+    - Class: 114
+      Script: {instanceID: 11914}
+    - Class: 114
+      Script: {instanceID: 24228}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/SplashScreen.unity:
     - Class: 1
@@ -579,7 +683,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 7ec4924fb7eff3f86b9fca2ca4d630ae
+      Hash: 9428ac7b197a6aa0da3aaf876d7246e9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -1006,5 +1110,7 @@ ScriptsOnlyBuild:
   platform: 9
   scenePathNames:
   - Assets/Scenes/SplashScreen.unity
+  - Assets/Scenes/Menu.unity
   - Assets/Scenes/MainQuestions.unity
+  - Assets/Scenes/CategoryComplete.unity
   playerPath: /Users/me/Documents/Duke/10 Fall 2020/Independent Study/spatial-reasoning-AR/spatial-reasoning-AR-app/multiple-with-prompt

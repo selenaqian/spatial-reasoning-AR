@@ -19,4 +19,12 @@ public class sceneController : MonoBehaviour
       SceneManager.LoadScene(nextSceneIndex);
     }
   }
+
+  public void toMenu() {
+    SceneManager.LoadScene("Menu");
+  }
+
+  public void toQuestions() {
+    SceneManager.LoadScene("MainQuestions");
+  }
 }

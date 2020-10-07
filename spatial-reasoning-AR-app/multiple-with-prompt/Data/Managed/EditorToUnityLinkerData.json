@@ -7,7 +7,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -17,7 +19,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -27,7 +31,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -37,7 +43,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -89,7 +97,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -99,7 +109,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -109,7 +121,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -147,7 +161,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -226,7 +242,9 @@
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/SplashScreen.unity"
+                "Assets/Scenes/SplashScreen.unity",
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -235,7 +253,9 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/SplashScreen.unity"
+                "Assets/Scenes/SplashScreen.unity",
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -255,7 +275,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -265,7 +287,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -275,7 +299,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -285,7 +311,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -295,7 +323,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -305,7 +335,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -315,7 +347,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -325,7 +359,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -335,7 +371,9 @@
             "moduleName": "UI",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -345,7 +383,9 @@
             "moduleName": "UI",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -375,7 +415,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -385,7 +427,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -414,7 +458,9 @@
             "moduleName": "TextRendering",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -424,7 +470,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -434,7 +482,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -444,7 +494,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {
@@ -454,7 +506,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/Menu.unity",
+                "Assets/Scenes/MainQuestions.unity",
+                "Assets/Scenes/CategoryComplete.unity"
             ]
         },
         {

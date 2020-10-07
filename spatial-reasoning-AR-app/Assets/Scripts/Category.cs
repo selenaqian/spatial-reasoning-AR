@@ -20,6 +20,8 @@ public class Category
 {
     public Question[] allData;
     public int currentQuestion;
+    private int tutorialNumber = -1;
+    private int exerciseNumber = -1;
 
     public Category(Question[] questions, int current) {
       allData = questions;
@@ -84,6 +86,36 @@ public class Category
       }
       else {
         return null;
+      }
+    }
+
+    public int getNumberTutorial() {
+      if (tutorialNumber>=0) {
+        return tutorialNumber;
+      }
+      else {
+        int count = 0;
+        foreach (Question q in allData) {
+          if (q.type == "tutorial") {
+            count++;
+          }
+        }
+        return count;
+      }
+    }
+
+    public int getNumberExercise() {
+      if (exerciseNumber>=0) {
+        return exerciseNumber;
+      }
+      else {
+        int count = 0;
+        foreach (Question q in allData) {
+          if (q.type == "exercise") {
+            count++;
+          }
+        }
+        return count;
       }
     }
 }
