@@ -1,1 +1,23 @@
-{"allData":[{"model": "tutorial", "correctRotation": "350,10,0", "range":10.0, "type": "tutorial"}, {"model": "tutorial", "correctRotation": "0,90,300", "range":10.0, "type": "exercise"}, {"model": "tutorial", "correctRotation": "0,180,270", "range":10.0, "type": "exercise"}], "currentQuestion": 0}
+{
+  "allData": [
+    {
+      "model": "tutorial",
+      "correctRotation": "350,10,0",
+      "range": 10,
+      "type": "tutorial"
+    },
+    {
+      "model": "tutorial",
+      "correctRotation": "0,90,300",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "tutorial",
+      "correctRotation": "0,180,270",
+      "range": 10,
+      "type": "exercise"
+    }
+  ],
+  "currentQuestion": 0
+}
