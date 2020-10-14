@@ -681,7 +681,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 9428ac7b197a6aa0da3aaf876d7246e9
+      Hash: 3105e9d98d71a5f9d894023b7ba5dce9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller

@@ -10,6 +10,7 @@
 
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.XR.ARFoundation;
@@ -45,7 +46,13 @@ public class Controller : MonoBehaviour
     */
     void Awake()
     {
-      rotations = JsonUtility.FromJson<Category>(Resources.Load<TextAsset>(ROTATIONS_JSON).ToString());
+      if(System.IO.File.Exists(Application.persistentDataPath + "/Rotations.txt")) {
+        Debug.Log("reading from saved");
+        rotations = JsonUtility.FromJson<Category>(File.ReadAllText(Application.persistentDataPath + "/Rotations.txt"));
+      }
+      else {
+        rotations = JsonUtility.FromJson<Category>(Resources.Load<TextAsset>(ROTATIONS_JSON).ToString());
+      }
       myTrackedImageManager = GetComponent<ARTrackedImageManager>();
       current = null;
       previous = null;
@@ -55,6 +62,7 @@ public class Controller : MonoBehaviour
       beginExercises.gameObject.SetActive(false);
       redo.gameObject.SetActive(false);
       responseText.gameObject.SetActive(false);
+      reset();
     }
 
     void OnEnable()
@@ -86,6 +94,14 @@ public class Controller : MonoBehaviour
           reset();
           break;
         }
+      }
+    }
+
+    void OnApplicationPause(bool paused) {
+      if (paused) {
+        String json = JsonUtility.ToJson(rotations);
+        Debug.Log("writing out: " + json);
+        File.WriteAllText(Application.persistentDataPath + "/Rotations.txt", json);
       }
     }
 

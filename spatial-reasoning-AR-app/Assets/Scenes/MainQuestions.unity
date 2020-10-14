@@ -1947,6 +1947,7 @@ MonoBehaviour:
   promptText: {fileID: 665559391}
   arCamera: {fileID: 1787920353}
   submit: {fileID: 563064213}
+  submitText: {fileID: 531503475}
   responseText: {fileID: 727023630}
   beginExercises: {fileID: 1663744858}
   progressText: {fileID: 372508512}
