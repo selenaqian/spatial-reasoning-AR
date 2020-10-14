@@ -22,6 +22,9 @@ public class Question
     public float range;
     public String[] alternateObjects;
     public String type;
+    public String prompt;
+    public String correct;
+    public String wrong;
 
     public Question(String objName, String vec) {
       model = objName;
@@ -47,6 +50,18 @@ public class Question
       return model;
     }
 
+    public String getPrompt() {
+      return prompt;
+    }
+
+    public String getCorrect() {
+      return correct;
+    }
+
+    public String getWrong() {
+      return wrong;
+    }
+
     public Quaternion getCorrectRotation() {
       Vector3 correctRotationVector = stringToVector(correctRotation);
       Debug.Log("rotation vector: " + correctRotationVector);
@@ -54,7 +69,6 @@ public class Question
     }
 
     public static Vector3 stringToVector(String str) {
-      Debug.Log("converting string to vector");
       String[] strArray = str.Split(',');
       return new Vector3(float.Parse(strArray[0]), float.Parse(strArray[1]), float.Parse(strArray[2]));
     }

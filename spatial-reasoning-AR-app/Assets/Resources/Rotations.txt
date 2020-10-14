@@ -4,97 +4,117 @@
       "model": "tutorial",
       "correctRotation": "350,10,0",
       "range": 10,
-      "type": "tutorial"
+      "type": "tutorial",
+      "prompt": "Practice rotating the object to match!",
+      "correct": "Good job!",
+      "wrong": "";
     },
     {
       "model": "rotations1",
       "correctRotation": "0,90,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match.",
+      "correct": "That's right!",
+      "wrong": "Incorrect. Try again!";
     },
     {
       "model": "rotations1",
       "correctRotation": "0,180,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations02",
       "correctRotation": "0,90,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations3",
       "correctRotation": "0,270,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations04",
       "correctRotation": "0,90,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations5",
       "correctRotation": "0,45,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations06",
       "correctRotation": "270,0,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations7",
       "correctRotation": "0,90,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations08",
       "correctRotation": "0,180,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations9",
       "correctRotation": "0,90,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations010",
       "correctRotation": "0,270,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations011",
       "correctRotation": "0,90,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations012",
       "correctRotation": "0,45,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations13",
       "correctRotation": "0,90,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     },
     {
       "model": "rotations014",
       "correctRotation": "0,45,0",
       "range": 10,
-      "type": "exercise"
+      "type": "exercise",
+      "prompt": "Rotate the object to match."
     }
   ],
   "currentQuestion": 0

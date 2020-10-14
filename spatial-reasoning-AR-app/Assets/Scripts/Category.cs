@@ -63,15 +63,9 @@ public class Category
       currentQuestion++;
       Debug.Log(currentQuestion);
       if (currentQuestion >= allData.Length) {
-        categoryComplete();
         return -1;
       }
       return currentQuestion;
-    }
-
-    public void categoryComplete() {
-      // load main Scene again, for now show a debug message
-      Debug.Log("Category complete!");
     }
 
     public System.Boolean isCorrect(GameObject obj) {

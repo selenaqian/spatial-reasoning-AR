@@ -33,9 +33,10 @@ public class Controller : MonoBehaviour
     public TextMeshProUGUI promptText;
     public Camera arCamera;
     public Button submit;
-    public TextMeshProUGUI submitText;
+    public TextMeshProUGUI responseText;
     public Button beginExercises;
     public TextMeshProUGUI progressText;
+    public Button redo;
 
     /**
     * Loads questions from data file.
@@ -44,7 +45,6 @@ public class Controller : MonoBehaviour
     void Awake()
     {
       rotations = JsonUtility.FromJson<Category>(Resources.Load<TextAsset>(ROTATIONS_JSON).ToString());
-      Debug.Log(rotations);
       myTrackedImageManager  = GetComponent<ARTrackedImageManager>();
       current = null;
       previous = null;
@@ -52,6 +52,7 @@ public class Controller : MonoBehaviour
       previousPrompt = null;
       submit.gameObject.SetActive(false);
       beginExercises.gameObject.SetActive(false);
+      redo.gameObject.SetActive(false);
     }
 
     void OnEnable()
@@ -70,9 +71,8 @@ public class Controller : MonoBehaviour
         if (IsPointerOverUIObject()) {
           return;
         }
-        if (submitText.text.Equals("That's right!")) {
+        if (responseText.gameObject.activeSelf) {
           if (rotations.nextQuestion() > 0) {
-            Debug.Log("correct, reset");
             reset();
           }
           else {
@@ -80,8 +80,7 @@ public class Controller : MonoBehaviour
           }
           break;
         }
-        else if (submitText.text.Equals("Incorrect. Try again!")) {
-          Debug.Log("incorrect, reset");
+        else if (responseText.gameObject.activeSelf) {
           reset();
           break;
         }
@@ -102,10 +101,17 @@ public class Controller : MonoBehaviour
     * Creates new current and prompt objects.
     */
     private void reset() {
-      submitText.text = "Submit";
-      submit.GetComponent<Image>().color = Color.blue;
-      promptText.text = "Rotate the object to match."; // TODO: make this part of the Question class and txt file
-      progressText.text = (rotations.currentQuestion - rotations.getNumberTutorial() + 1) + " of " + rotations.getNumberExercise();
+      beginExercises.gameObject.SetActive(false);
+      redo.gameObject.SetActive(false);
+      responseText.gameObject.SetActive(false);
+      promptText.text = rotations.getCurrent().getPrompt(); // TODO: make this part of the Question class and txt file
+      if (rotations.getCurrent().isTutorial()) {
+        progressText.text = "Tutorial";
+      }
+      else {
+        progressText.text = (rotations.currentQuestion - rotations.getNumberTutorial() + 1) + " of " + rotations.getNumberExercise();
+        submit.gameObject.SetActive(true);
+      }
       createNewCurrent();
       createNewPrompt();
     }
@@ -114,9 +120,15 @@ public class Controller : MonoBehaviour
     * Moves from tutorial to exercises.
     */
     public void begin() {
-      beginExercises.gameObject.SetActive(false);
-      submit.gameObject.SetActive(true);
       rotations.nextQuestion();
+      reset();
+    }
+
+    /**
+    * Goes back through tutorial with randomized rotation.
+    */
+    public void redoTutorial() {
+      rotations.currentQuestion = 0;
       reset();
     }
 
@@ -132,16 +144,8 @@ public class Controller : MonoBehaviour
           currentRotation = trackedImage.transform.rotation;
           /* If an image is properly tracked */
           if (trackedImage.trackingState == TrackingState.Tracking) {
-            Debug.Log("tracking");
-            if (promptText.text.Equals("Point camera at Rotations lesson card.")) {
-              promptText.text = "Practice rotating the object to match!"; //TODO: also fix this so it's not a magic value
-            }
+            promptText.text = rotations.getCurrent().getPrompt();
             if(current == null || !current.name.Equals(rotations.getCurrentModel())) {
-              if (current==null) Debug.Log("current null");
-              else {
-                Debug.Log("current not correct name");
-                Debug.Log("current name: " + current.name + "needed name: " + rotations.getCurrentModel());
-              }
               createNewCurrent();
               createNewPrompt();
             }
@@ -155,15 +159,12 @@ public class Controller : MonoBehaviour
       }
 
       private void createNewCurrent() {
-        Debug.Log("creating new");
-        Debug.Log("current model:" + rotations.getCurrentModel());
         GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
-        Debug.Log("temp: " + temp.name + " correct rotation: " + rotations.getCurrentCorrectRotation());
         current = Instantiate(temp);
         current.name = rotations.getCurrentModel(); // the name was tutorial(Clone) instead of tutorial!
 
         if (previous!= null && previous != current) {
-          previous.SetActive(false);
+          Destroy(previous);
         }
 
         current.SetActive(true);
@@ -171,32 +172,11 @@ public class Controller : MonoBehaviour
       }
 
       private void createNewPrompt() {
-        Debug.Log("creating new prompt");
-
         GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
-        Debug.Log("current model name: " + rotations.getCurrentModel());
-        Debug.Log("temp: " + temp);
         prompt = Instantiate(temp);
-        Debug.Log("created new prompt: " + prompt);
         prompt.transform.rotation = rotations.getCurrentCorrectRotation();
 
-        Component[] components = prompt.GetComponents(typeof(Component));
-        foreach(Component component in components) {
-          Debug.Log(component.ToString());
-        }
-
-        //TODO: doesn't seem to be working
-        Debug.Log("mesh: " + prompt.GetComponent<MeshRenderer>());
-        Debug.Log("material: " + prompt.GetComponent<MeshRenderer>().material);
-        Debug.Log("color: " + prompt.GetComponent<MeshRenderer>().material.color);
-        Color translucent = prompt.GetComponent<Renderer>().material.color;
-        Debug.Log("mesh: " + prompt.GetComponent<Renderer>() + ", material: " + prompt.GetComponent<MeshRenderer>().material + ", color: " + prompt.GetComponent<MeshRenderer>().material.color);
-        translucent.a = 0.5f;
-        Debug.Log("translucent: " + translucent);
-        prompt.GetComponent<MeshRenderer>().material.color = translucent;
-
         if (previousPrompt!= null && previousPrompt != prompt) {
-          Debug.Log("destroying");
           Destroy(previousPrompt);
         }
 
@@ -216,23 +196,22 @@ public class Controller : MonoBehaviour
       }
 
       public void checkCorrect() {
-        Debug.Log("checking");
         if(rotations.isCorrect(current)) {
-          Debug.Log("correct rotation! " + currentRotation.eulerAngles);
+          responseText.text = rotations.getCurrent().getCorrect();
           if (rotations.getCurrent().isTutorial()) {
-            promptText.text = "Good job!";
             beginExercises.gameObject.SetActive(true);
+            redo.gameObject.SetActive(true);
             //This currently assumes only 1 tutorial object. Would need to add in a checker of some sort for more tutorial objects if have multiple.
           }
           else {
-            submitText.text = "That's right!";
-            submit.GetComponent<Image>().color = Color.green;
+            responseText.gameObject.SetActive(true);
+            submit.gameObject.SetActive(false);
           }
         }
         else {
-          Debug.Log("incorrect");
-          submitText.text = "Incorrect. Try again!";
-          submit.GetComponent<Image>().color = Color.red;
+          responseText.text = rotations.getCurrent().getWrong();
+          responseText.gameObject.SetActive(true);
+          submit.gameObject.SetActive(false);
         }
       }
 }
