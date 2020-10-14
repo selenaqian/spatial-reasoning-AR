@@ -33,6 +33,7 @@ public class Controller : MonoBehaviour
     public TextMeshProUGUI promptText;
     public Camera arCamera;
     public Button submit;
+    public TextMeshProUGUI submitText;
     public TextMeshProUGUI responseText;
     public Button beginExercises;
     public TextMeshProUGUI progressText;
@@ -45,7 +46,7 @@ public class Controller : MonoBehaviour
     void Awake()
     {
       rotations = JsonUtility.FromJson<Category>(Resources.Load<TextAsset>(ROTATIONS_JSON).ToString());
-      myTrackedImageManager  = GetComponent<ARTrackedImageManager>();
+      myTrackedImageManager = GetComponent<ARTrackedImageManager>();
       current = null;
       previous = null;
       prompt = null;
@@ -53,6 +54,7 @@ public class Controller : MonoBehaviour
       submit.gameObject.SetActive(false);
       beginExercises.gameObject.SetActive(false);
       redo.gameObject.SetActive(false);
+      responseText.gameObject.SetActive(false);
     }
 
     void OnEnable()
@@ -71,7 +73,7 @@ public class Controller : MonoBehaviour
         if (IsPointerOverUIObject()) {
           return;
         }
-        if (responseText.gameObject.activeSelf) {
+        if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getCorrect())) {
           if (rotations.nextQuestion() > 0) {
             reset();
           }
@@ -80,11 +82,16 @@ public class Controller : MonoBehaviour
           }
           break;
         }
-        else if (responseText.gameObject.activeSelf) {
+        else if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getWrong())) {
           reset();
           break;
         }
       }
+    }
+
+    private Color changeTransparency(Color c, float f) {
+      c.a = f;
+      return c;
     }
 
     // from: https://answers.unity.com/questions/1469696/ui-button-and-touch-input-conflict.html
@@ -111,6 +118,8 @@ public class Controller : MonoBehaviour
       else {
         progressText.text = (rotations.currentQuestion - rotations.getNumberTutorial() + 1) + " of " + rotations.getNumberExercise();
         submit.gameObject.SetActive(true);
+        submit.GetComponent<Image>().color = changeTransparency(submit.GetComponent<Image>().color, 1.0f);
+        submitText.color = changeTransparency(submitText.color, 1.0f);
       }
       createNewCurrent();
       createNewPrompt();
@@ -129,6 +138,8 @@ public class Controller : MonoBehaviour
     */
     public void redoTutorial() {
       rotations.currentQuestion = 0;
+      float randomRotation = UnityEngine.Random.Range(0.0f,360.0f);
+      rotations.getCurrent().correctRotation = "0," + randomRotation + ",0";
       reset();
     }
 
@@ -144,6 +155,7 @@ public class Controller : MonoBehaviour
           currentRotation = trackedImage.transform.rotation;
           /* If an image is properly tracked */
           if (trackedImage.trackingState == TrackingState.Tracking) {
+            Debug.Log("tracking");
             promptText.text = rotations.getCurrent().getPrompt();
             if(current == null || !current.name.Equals(rotations.getCurrentModel())) {
               createNewCurrent();
@@ -205,13 +217,15 @@ public class Controller : MonoBehaviour
           }
           else {
             responseText.gameObject.SetActive(true);
-            submit.gameObject.SetActive(false);
+            submit.GetComponent<Image>().color = changeTransparency(submit.GetComponent<Image>().color, 0.0f);
+            submitText.color = changeTransparency(submitText.color, 0.0f);
           }
         }
         else {
           responseText.text = rotations.getCurrent().getWrong();
           responseText.gameObject.SetActive(true);
-          submit.gameObject.SetActive(false);
+          submit.GetComponent<Image>().color = changeTransparency(submit.GetComponent<Image>().color, 0.0f);
+          submitText.color = changeTransparency(submitText.color, 0.0f);
         }
       }
 }
