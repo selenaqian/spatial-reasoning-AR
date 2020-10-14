@@ -264,8 +264,7 @@
             "fullManagedTypeName": "UnityEngine.Renderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/SplashScreen.unity"
             ]
         },
         {
@@ -394,8 +393,7 @@
             "fullManagedTypeName": "UnityEngine.MeshFilter",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/SplashScreen.unity"
             ]
         },
         {
@@ -404,8 +402,7 @@
             "fullManagedTypeName": "UnityEngine.Mesh",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/SplashScreen.unity"
             ]
         },
         {
@@ -438,8 +435,7 @@
             "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/MainQuestions.unity"
+                "Assets/Scenes/SplashScreen.unity"
             ]
         },
         {
@@ -522,27 +518,9 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Collider",
-            "fullManagedTypeName": "UnityEngine.Collider",
-            "moduleName": "Physics",
-            "usedInScenes": [
-                "Assets/Scenes/MainQuestions.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Cubemap",
             "fullManagedTypeName": "UnityEngine.Cubemap",
             "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/MainQuestions.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "BoxCollider",
-            "fullManagedTypeName": "UnityEngine.BoxCollider",
-            "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/MainQuestions.unity"
             ]

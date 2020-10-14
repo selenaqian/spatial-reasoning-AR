@@ -19,7 +19,7 @@
       "type": "exercise"
     },
     {
-      "model": "rotations2",
+      "model": "rotations02",
       "correctRotation": "0,90,0",
       "range": 10,
       "type": "exercise"
@@ -31,13 +31,67 @@
       "type": "exercise"
     },
     {
-      "model": "rotations4",
+      "model": "rotations04",
       "correctRotation": "0,90,0",
       "range": 10,
       "type": "exercise"
     },
     {
       "model": "rotations5",
+      "correctRotation": "0,45,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations06",
+      "correctRotation": "270,0,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations7",
+      "correctRotation": "0,90,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations08",
+      "correctRotation": "0,180,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations9",
+      "correctRotation": "0,90,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations010",
+      "correctRotation": "0,270,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations011",
+      "correctRotation": "0,90,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations012",
+      "correctRotation": "0,45,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations13",
+      "correctRotation": "0,90,0",
+      "range": 10,
+      "type": "exercise"
+    },
+    {
+      "model": "rotations014",
       "correctRotation": "0,45,0",
       "range": 10,
       "type": "exercise"

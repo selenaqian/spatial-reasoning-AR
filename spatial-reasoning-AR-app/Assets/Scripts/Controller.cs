@@ -171,24 +171,33 @@ public class Controller : MonoBehaviour
       }
 
       private void createNewPrompt() {
-        if (prompt != null) {
-          GameObject toDestroy = prompt;
-          Debug.Log(prompt + " " + toDestroy);
-          Destroy(toDestroy);
-        }
+        Debug.Log("creating new prompt");
+
         GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
+        Debug.Log("current model name: " + rotations.getCurrentModel());
+        Debug.Log("temp: " + temp);
         prompt = Instantiate(temp);
+        Debug.Log("created new prompt: " + prompt);
         prompt.transform.rotation = rotations.getCurrentCorrectRotation();
 
+        Component[] components = prompt.GetComponents(typeof(Component));
+        foreach(Component component in components) {
+          Debug.Log(component.ToString());
+        }
+
         //TODO: doesn't seem to be working
+        Debug.Log("mesh: " + prompt.GetComponent<MeshRenderer>());
+        Debug.Log("material: " + prompt.GetComponent<MeshRenderer>().material);
+        Debug.Log("color: " + prompt.GetComponent<MeshRenderer>().material.color);
         Color translucent = prompt.GetComponent<Renderer>().material.color;
         Debug.Log("mesh: " + prompt.GetComponent<Renderer>() + ", material: " + prompt.GetComponent<MeshRenderer>().material + ", color: " + prompt.GetComponent<MeshRenderer>().material.color);
         translucent.a = 0.5f;
         Debug.Log("translucent: " + translucent);
         prompt.GetComponent<MeshRenderer>().material.color = translucent;
 
-        if (previousPrompt!= null && previousPrompt != current) {
-          previousPrompt.SetActive(false);
+        if (previousPrompt!= null && previousPrompt != prompt) {
+          Debug.Log("destroying");
+          Destroy(previousPrompt);
         }
 
         prompt.SetActive(true);
