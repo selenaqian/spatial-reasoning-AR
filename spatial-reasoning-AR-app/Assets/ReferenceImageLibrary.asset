@@ -19,9 +19,9 @@ MonoBehaviour:
       m_GuidLow: 5499462755481902635
       m_GuidHigh: 5151119989546764950
     m_SerializedTextureGuid:
-      m_GuidLow: 3757721586630331076
-      m_GuidHigh: 8365709322464101818
+      m_GuidLow: 7240120680612407532
+      m_GuidHigh: 17139534419438149307
     m_Size: {x: 0.1, y: 0.1}
     m_SpecifySize: 1
-    m_Name: bridge
+    m_Name: rotations
     m_Texture: {fileID: 0}
