@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - sceneController
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
+    - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
@@ -31,6 +32,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/CategoryComplete.unity:
     - Class: 1
@@ -107,11 +112,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9722}
     - Class: 114
+      Script: {instanceID: 9756}
+    - Class: 114
       Script: {instanceID: 9884}
+    - Class: 114
+      Script: {instanceID: 9898}
     - Class: 114
       Script: {instanceID: 9942}
     - Class: 114
+      Script: {instanceID: 10292}
+    - Class: 114
       Script: {instanceID: 10404}
+    - Class: 114
+      Script: {instanceID: 10644}
     - Class: 114
       Script: {instanceID: 10888}
     - Class: 114
@@ -140,6 +153,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11850}
     - Class: 114
       Script: {instanceID: 11916}
+    - Class: 114
+      Script: {instanceID: 11932}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1105,4 +1120,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/MainQuestions.unity
   - Assets/Scenes/CategoryComplete.unity
-  playerPath: /Users/me/Documents/Duke/10 Fall 2020/Independent Study/spatial-reasoning-AR/spatial-reasoning-AR-app/multiple-with-prompt
+  playerPath: /Users/me/Documents/Duke/10 Fall 2020/Independent Study/spatial-reasoning-AR/spatial-reasoning-AR-app/user-testing-1
