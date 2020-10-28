@@ -40,6 +40,10 @@ public class Controller : MonoBehaviour
     public TextMeshProUGUI progressText;
     public Button redo;
 
+    void Start() {
+      Application.targetFrameRate = 60;
+    }
+
     /*
     * Loads questions from data file.
     * Sets myTrackedImageManager to the component on the AR Session Origin.
@@ -77,6 +81,9 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
+      if (prompt != null && current.activeSelf) {
+        updatePromptPosition();
+      }
       foreach(Touch touch in Input.touches) {
         if (IsPointerOverUIObject()) {
           return;
@@ -201,7 +208,6 @@ public class Controller : MonoBehaviour
     private void createNewPrompt() {
       GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
       prompt = Instantiate(temp);
-      prompt.transform.rotation = rotations.getCurrentCorrectRotation();
 
       if (previousPrompt!= null && previousPrompt != prompt) {
         Destroy(previousPrompt);
@@ -214,6 +220,7 @@ public class Controller : MonoBehaviour
     private void updatePromptPosition() {
       Vector3 desiredLocation = new Vector3(0.5f,0.8f,0.25f);
       prompt.transform.position = arCamera.GetComponent<Camera>().ViewportToWorldPoint(desiredLocation);
+      prompt.transform.rotation = rotations.getCurrentCorrectRotation();
     }
 
     private void updateCurrentPosition() {
@@ -238,6 +245,7 @@ public class Controller : MonoBehaviour
         }
       }
       else {
+        Debug.Log("incorrect: " + current.transform.rotation.eulerAngles);
         responseText.text = rotations.getCurrent().getWrong();
         responseText.color = Color.red;
         responseText.gameObject.SetActive(true);

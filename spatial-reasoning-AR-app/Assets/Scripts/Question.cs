@@ -64,7 +64,6 @@ public class Question
 
     public Quaternion getCorrectRotation() {
       Vector3 correctRotationVector = stringToVector(correctRotation);
-      Debug.Log("rotation vector: " + correctRotationVector);
       return Quaternion.Euler(correctRotationVector);
     }
 
