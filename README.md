@@ -11,6 +11,11 @@ This project focuses on diving into the affordances of augmented reality (AR) an
 
 Overall Structure:
 
+The bulk of the interesting code is contained within 3 C# classes:
+* Question - stores information about one exercise and performs methods on and using that information, is serializable to allow for creation from and writing to file data
+* Category - stores information about a grouping of similar question types, methods accordingly update and use that information, is serializable to allow for creation from and writing to file data
+* Controller - handles the flow of the app, including loading in the data to create the Category, instantiating the objects, tracking the image, updating the current question and the display, etc. Generally attempts to call on other classes' methods when possible to avoid keeping details here.
+
 Challenges:
 1. AR Workflow - Building and testing the app multiple times in one coding session takes time and becomes quite tedious when making only minor changes. In order to limit this, I worked to create a distinct feature or two before building to get the most out of that build and debugging. I should have also looked into writing unit tests for this project — this is something I have only done in the past for Java projects.
 
