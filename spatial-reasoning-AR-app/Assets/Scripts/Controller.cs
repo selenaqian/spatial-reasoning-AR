@@ -31,6 +31,7 @@ public class Controller : MonoBehaviour
     Quaternion currentRotation;
     GameObject prompt;
     GameObject previousPrompt;
+    Boolean tracking;
     public TextMeshProUGUI promptText;
     public Camera arCamera;
     public Button submit;
@@ -84,6 +85,12 @@ public class Controller : MonoBehaviour
       if (prompt != null && current.activeSelf) {
         updatePromptPosition();
       }
+      //TODO: this isn't ever being triggered - not sure why, might also want to try looking at Limited TrackingState
+      if (current == null || !current.name.Equals(rotations.getCurrentModel())) {
+        tracking = false;
+        Debug.Log("tracking status: " + tracking);
+      }
+
       foreach(Touch touch in Input.touches) {
         if (IsPointerOverUIObject()) {
           return;
@@ -100,6 +107,19 @@ public class Controller : MonoBehaviour
         else if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getWrong())) {
           reset();
           break;
+        }
+        else if (!responseText.gameObject.activeSelf) {
+          responseText.color = Color.white;
+          if (tracking) {
+            responseText.text = "Click the Submit button when you're ready to check the rotation!";
+          }
+          else {
+            responseText.text = "Position the image in the camera view to make the object appear.";
+          }
+          responseText.gameObject.SetActive(true);
+        }
+        else {
+          responseText.gameObject.SetActive(false);
         }
       }
     }
@@ -134,11 +154,11 @@ public class Controller : MonoBehaviour
       beginExercises.gameObject.SetActive(false);
       redo.gameObject.SetActive(false);
       responseText.gameObject.SetActive(false);
-      promptText.text = rotations.getCurrent().getPrompt(); // TODO: make this part of the Question class and txt file
       if (rotations.getCurrent().isTutorial()) {
         progressText.text = "Tutorial";
       }
       else {
+        promptText.text = rotations.getCurrent().getPrompt();
         progressText.text = (rotations.currentQuestion - rotations.getNumberTutorial() + 1) + " of " + rotations.getNumberExercise();
         submit.gameObject.SetActive(true);
         submit.GetComponent<Image>().color = changeTransparency(submit.GetComponent<Image>().color, 1.0f);
@@ -178,6 +198,10 @@ public class Controller : MonoBehaviour
         /* If an image is properly tracked */
         if (trackedImage.trackingState == TrackingState.Tracking) {
           Debug.Log("tracking");
+          tracking = true;
+          if (responseText.text == "Position the image in the camera view to make the object appear.") {
+            responseText.gameObject.SetActive(false);
+          }
           promptText.text = rotations.getCurrent().getPrompt();
           if(current == null || !current.name.Equals(rotations.getCurrentModel())) {
             createNewCurrent();
