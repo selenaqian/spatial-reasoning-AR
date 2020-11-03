@@ -121,10 +121,14 @@ public class Controller : MonoBehaviour
 
     void OnApplicationPause(bool paused) {
       if (paused) {
-        String json = JsonUtility.ToJson(rotations);
-        Debug.Log("writing out: " + json);
-        File.WriteAllText(Application.persistentDataPath + "/Rotations.txt", json);
+        saveData();
       }
+    }
+
+    public void saveData() {
+      String json = JsonUtility.ToJson(rotations);
+      Debug.Log("writing out: " + json);
+      File.WriteAllText(Application.persistentDataPath + "/Rotations.txt", json);
     }
 
     private Color changeTransparency(Color c, float f) {
