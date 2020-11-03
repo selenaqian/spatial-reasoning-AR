@@ -50,13 +50,7 @@ public class Controller : MonoBehaviour
     */
     void Awake()
     {
-      if(System.IO.File.Exists(Application.persistentDataPath + "/Rotations.txt")) {
-        Debug.Log("reading from saved");
-        rotations = JsonUtility.FromJson<Category>(File.ReadAllText(Application.persistentDataPath + "/Rotations.txt"));
-      }
-      else {
-        rotations = JsonUtility.FromJson<Category>(Resources.Load<TextAsset>(ROTATIONS_JSON).ToString());
-      }
+      readData();
       myTrackedImageManager = GetComponent<ARTrackedImageManager>();
       current = null;
       previous = null;
@@ -86,16 +80,9 @@ public class Controller : MonoBehaviour
       }
       foreach(Touch touch in Input.touches) {
         if (touch.phase == TouchPhase.Ended) {
-          if (IsPointerOverUIObject()) {
-            return;
-          }
+          if (IsPointerOverUIObject()) return;
           if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getCorrect())) {
-            if (rotations.nextQuestion() > 0) {
-              reset();
-            }
-            else {
-              SceneManager.LoadScene("CategoryComplete");
-            }
+            advance();
             break;
           }
           else if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getWrong())) {
@@ -103,18 +90,9 @@ public class Controller : MonoBehaviour
             break;
           }
           else if (!responseText.gameObject.activeSelf) {
-            responseText.color = Color.white;
-            if (current != null && current.activeSelf) {
-              responseText.text = "Click the Submit button when you're ready to check the rotation!";
-            }
-            else {
-              responseText.text = "Position the image in the camera view to make the object appear.";
-            }
-            responseText.gameObject.SetActive(true);
+            showHint();
           }
-          else {
-            responseText.gameObject.SetActive(false);
-          }
+          else responseText.gameObject.SetActive(false);
         }
       }
     }
@@ -125,10 +103,34 @@ public class Controller : MonoBehaviour
       }
     }
 
+    /**
+    * Saves current status of rotations to persistentDataPath. Allows for reading back later.
+    */
     public void saveData() {
       String json = JsonUtility.ToJson(rotations);
       Debug.Log("writing out: " + json);
       File.WriteAllText(Application.persistentDataPath + "/Rotations.txt", json);
+    }
+
+    private void readData() {
+      if(System.IO.File.Exists(Application.persistentDataPath + "/Rotations.txt")) {
+        Debug.Log("reading from saved");
+        rotations = JsonUtility.FromJson<Category>(File.ReadAllText(Application.persistentDataPath + "/Rotations.txt"));
+      }
+      else {
+        rotations = JsonUtility.FromJson<Category>(Resources.Load<TextAsset>(ROTATIONS_JSON).ToString());
+      }
+    }
+
+    private void showHint() {
+      responseText.color = Color.white;
+      if (current != null && current.activeSelf) {
+        responseText.text = "Click the Submit button when you're ready to check the rotation!";
+      }
+      else {
+        responseText.text = "Position the image in the camera view to make the object appear.";
+      }
+      responseText.gameObject.SetActive(true);
     }
 
     private Color changeTransparency(Color c, float f) {
@@ -169,6 +171,15 @@ public class Controller : MonoBehaviour
       previousPrompt = setPrevious(previousPrompt, prompt);
     }
 
+    private void advance() {
+      if (rotations.nextQuestion() > 0) {
+        reset();
+      }
+      else {
+        SceneManager.LoadScene("CategoryComplete");
+      }
+    }
+
     /*
     * Moves from tutorial to exercises.
     */
@@ -205,8 +216,6 @@ public class Controller : MonoBehaviour
           if(current == null || !current.name.Equals(rotations.getCurrentModel())) {
             current = createNew(current);
             previous = setPrevious(previous, current);
-            Debug.Log("correctly created: " + current.name + current);
-            Debug.Log("correctly set: " + previous.name + previous);
             prompt = createNew(prompt);
             previousPrompt = setPrevious(previousPrompt, prompt);
           }
@@ -250,6 +259,9 @@ public class Controller : MonoBehaviour
       Debug.Log(currentRotation.eulerAngles);
     }
 
+    /**
+    * Checks if current rotation of the object "current" matches the desired rotation.
+    */
     public void checkCorrect() {
       if(rotations.isCorrect(current)) {
         responseText.text = rotations.getCurrent().getCorrect();
@@ -263,18 +275,20 @@ public class Controller : MonoBehaviour
         }
         else {
           responseText.gameObject.SetActive(true);
-          submit.GetComponent<Image>().color = changeTransparency(submit.GetComponent<Image>().color, 0.0f);
-          submitText.color = changeTransparency(submitText.color, 0.0f);
+          hideSubmitButton();
         }
       }
       else {
-        Debug.Log("incorrect: " + current.transform.rotation.eulerAngles);
         responseText.text = rotations.getCurrent().getWrong();
         responseText.color = Color.red;
         responseText.gameObject.SetActive(true);
-        submit.GetComponent<Image>().color = changeTransparency(submit.GetComponent<Image>().color, 0.0f);
-        submitText.color = changeTransparency(submitText.color, 0.0f);
+        hideSubmitButton();
       }
+    }
+
+    private void hideSubmitButton() {
+      submit.GetComponent<Image>().color = changeTransparency(submit.GetComponent<Image>().color, 0.0f);
+      submitText.color = changeTransparency(submitText.color, 0.0f);
     }
 
     /*
