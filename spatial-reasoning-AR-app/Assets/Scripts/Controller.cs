@@ -31,7 +31,6 @@ public class Controller : MonoBehaviour
     Quaternion currentRotation;
     GameObject prompt;
     GameObject previousPrompt;
-    Boolean tracking;
     public TextMeshProUGUI promptText;
     public Camera arCamera;
     public Button submit;
@@ -85,12 +84,6 @@ public class Controller : MonoBehaviour
       if (prompt != null && current.activeSelf) {
         updatePromptPosition();
       }
-      //TODO: this isn't ever being triggered - not sure why, might also want to try looking at Limited TrackingState
-      if (current == null || !current.name.Equals(rotations.getCurrentModel())) {
-        tracking = false;
-        Debug.Log("tracking status: " + tracking);
-      }
-
       foreach(Touch touch in Input.touches) {
         if (touch.phase == TouchPhase.Ended) {
           if (IsPointerOverUIObject()) {
@@ -111,7 +104,7 @@ public class Controller : MonoBehaviour
           }
           else if (!responseText.gameObject.activeSelf) {
             responseText.color = Color.white;
-            if (tracking) {
+            if (current != null && current.activeSelf) {
               responseText.text = "Click the Submit button when you're ready to check the rotation!";
             }
             else {
@@ -166,8 +159,10 @@ public class Controller : MonoBehaviour
         submit.GetComponent<Image>().color = changeTransparency(submit.GetComponent<Image>().color, 1.0f);
         submitText.color = changeTransparency(submitText.color, 1.0f);
       }
-      createNewCurrent();
-      createNewPrompt();
+      current = createNew(current);
+      previous = setPrevious(previous, current);
+      prompt = createNew(prompt);
+      previousPrompt = setPrevious(previousPrompt, prompt);
     }
 
     /*
@@ -199,16 +194,20 @@ public class Controller : MonoBehaviour
         currentRotation = trackedImage.transform.rotation;
         /* If an image is properly tracked */
         if (trackedImage.trackingState == TrackingState.Tracking) {
-          Debug.Log("tracking");
-          tracking = true;
           if (responseText.text == "Position the image in the camera view to make the object appear.") {
             responseText.gameObject.SetActive(false);
           }
           promptText.text = rotations.getCurrent().getPrompt();
           if(current == null || !current.name.Equals(rotations.getCurrentModel())) {
-            createNewCurrent();
-            createNewPrompt();
+            current = createNew(current);
+            previous = setPrevious(previous, current);
+            Debug.Log("correctly created: " + current.name + current);
+            Debug.Log("correctly set: " + previous.name + previous);
+            prompt = createNew(prompt);
+            previousPrompt = setPrevious(previousPrompt, prompt);
           }
+          current.SetActive(true);
+          prompt.SetActive(true);
           updateCurrentPosition();
           updatePromptPosition();
           if (rotations.getCurrent().isTutorial()) {
@@ -218,29 +217,21 @@ public class Controller : MonoBehaviour
       }
     }
 
-    private void createNewCurrent() {
+    private GameObject createNew(GameObject curr) {
       GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
-      current = Instantiate(temp);
-      current.name = rotations.getCurrentModel(); // the name was tutorial(Clone) instead of tutorial!
-
-      if (previous!= null && previous != current) {
-        Destroy(previous);
-      }
-
-      current.SetActive(true);
-      previous = current;
+      curr = Instantiate(temp);
+      curr.name = rotations.getCurrentModel();
+      curr.SetActive(false);
+      Debug.Log("created new: " + curr.name);
+      return curr;
     }
 
-    private void createNewPrompt() {
-      GameObject temp = Resources.Load(rotations.getCurrentModel()) as GameObject;
-      prompt = Instantiate(temp);
-
-      if (previousPrompt!= null && previousPrompt != prompt) {
-        Destroy(previousPrompt);
+    private GameObject setPrevious(GameObject prev, GameObject curr) {
+      if (prev!= null && prev != current) {
+        Destroy(prev);
       }
-
-      prompt.SetActive(true);
-      previousPrompt = prompt;
+      prev = curr;
+      return prev;
     }
 
     private void updatePromptPosition() {
@@ -259,6 +250,8 @@ public class Controller : MonoBehaviour
       if(rotations.isCorrect(current)) {
         responseText.text = rotations.getCurrent().getCorrect();
         responseText.color = Color.green;
+        current.SetActive(false);
+        prompt.SetActive(false);
         if (rotations.getCurrent().isTutorial()) {
           beginExercises.gameObject.SetActive(true);
           redo.gameObject.SetActive(true);
