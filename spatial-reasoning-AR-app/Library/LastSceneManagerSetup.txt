@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/MainQuestions.unity
+- path: Assets/Scenes/TutorialVideo.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

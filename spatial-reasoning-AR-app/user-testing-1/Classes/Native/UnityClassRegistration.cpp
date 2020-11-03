@@ -27,6 +27,9 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_UnityConnect();
 	RegisterModule_UnityConnect();
 
+	void RegisterModule_Video();
+	RegisterModule_Video();
+
 	void RegisterModule_InputLegacy();
 	RegisterModule_InputLegacy();
 
@@ -153,7 +156,7 @@ class Skybox;
 class SortingGroup; 
 class StreamingController; 
 class Terrain; 
-class VideoPlayer; 
+class VideoPlayer; template <> void RegisterUnityClass<VideoPlayer>(const char*);
 class VisualEffect; 
 class WindZone; 
 namespace UI { class CanvasRenderer; } template <> void RegisterUnityClass<UI::CanvasRenderer>(const char*);
@@ -228,8 +231,8 @@ class PreloadData; template <> void RegisterUnityClass<PreloadData>(const char*)
 class RuntimeAnimatorController; template <> void RegisterUnityClass<RuntimeAnimatorController>(const char*);
 class AnimatorController; 
 class AnimatorOverrideController; template <> void RegisterUnityClass<AnimatorOverrideController>(const char*);
-class SampleClip; 
-class AudioClip; 
+class SampleClip; template <> void RegisterUnityClass<SampleClip>(const char*);
+class AudioClip; template <> void RegisterUnityClass<AudioClip>(const char*);
 class Shader; template <> void RegisterUnityClass<Shader>(const char*);
 class ShaderVariantCollection; 
 class SpeedTreeWindAsset; 
@@ -255,7 +258,7 @@ class Texture2D; template <> void RegisterUnityClass<Texture2D>(const char*);
 class Cubemap; template <> void RegisterUnityClass<Cubemap>(const char*);
 class Texture2DArray; template <> void RegisterUnityClass<Texture2DArray>(const char*);
 class Texture3D; template <> void RegisterUnityClass<Texture3D>(const char*);
-class VideoClip; 
+class VideoClip; template <> void RegisterUnityClass<VideoClip>(const char*);
 class VisualEffectObject; 
 class VisualEffectAsset; 
 class VisualEffectSubgraph; 
@@ -303,7 +306,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 71 non stripped classes
+	//Total: 75 non stripped classes
 	//0. Camera
 	RegisterUnityClass<Camera>("Core");
 	//1. Behaviour
@@ -404,47 +407,55 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<AnimatorOverrideController>("Animation");
 	//49. RuntimeAnimatorController
 	RegisterUnityClass<RuntimeAnimatorController>("Animation");
-	//50. MonoScript
+	//50. VideoPlayer
+	RegisterUnityClass<VideoPlayer>("Video");
+	//51. AudioClip
+	RegisterUnityClass<AudioClip>("Audio");
+	//52. SampleClip
+	RegisterUnityClass<SampleClip>("Audio");
+	//53. MonoScript
 	RegisterUnityClass<MonoScript>("Core");
-	//51. UnityConnectSettings
+	//54. UnityConnectSettings
 	RegisterUnityClass<UnityConnectSettings>("UnityConnect");
-	//52. AudioManager
+	//55. AudioManager
 	RegisterUnityClass<AudioManager>("Audio");
-	//53. PlayerSettings
+	//56. PlayerSettings
 	RegisterUnityClass<PlayerSettings>("Core");
-	//54. PhysicsManager
+	//57. PhysicsManager
 	RegisterUnityClass<PhysicsManager>("Physics");
-	//55. TimeManager
+	//58. TimeManager
 	RegisterUnityClass<TimeManager>("Core");
-	//56. InputManager
+	//59. InputManager
 	RegisterUnityClass<InputManager>("Core");
-	//57. TagManager
+	//60. TagManager
 	RegisterUnityClass<TagManager>("Core");
-	//58. DelayedCallManager
+	//61. DelayedCallManager
 	RegisterUnityClass<DelayedCallManager>("Core");
-	//59. BuildSettings
+	//62. BuildSettings
 	RegisterUnityClass<BuildSettings>("Core");
-	//60. RuntimeInitializeOnLoadManager
+	//63. RuntimeInitializeOnLoadManager
 	RegisterUnityClass<RuntimeInitializeOnLoadManager>("Core");
-	//61. ResourceManager
+	//64. ResourceManager
 	RegisterUnityClass<ResourceManager>("Core");
-	//62. ScriptMapper
+	//65. ScriptMapper
 	RegisterUnityClass<ScriptMapper>("Core");
-	//63. MonoManager
+	//66. MonoManager
 	RegisterUnityClass<MonoManager>("Core");
-	//64. AudioBehaviour
+	//67. AudioBehaviour
 	RegisterUnityClass<AudioBehaviour>("Audio");
-	//65. AudioListener
+	//68. AudioListener
 	RegisterUnityClass<AudioListener>("Audio");
-	//66. CGProgram
+	//69. CGProgram
 	RegisterUnityClass<CGProgram>("Core");
-	//67. LightmapSettings
+	//70. LightmapSettings
 	RegisterUnityClass<LightmapSettings>("Core");
-	//68. LevelGameManager
+	//71. LevelGameManager
 	RegisterUnityClass<LevelGameManager>("Core");
-	//69. RenderSettings
+	//72. RenderSettings
 	RegisterUnityClass<RenderSettings>("Core");
-	//70. LightProbes
+	//73. VideoClip
+	RegisterUnityClass<VideoClip>("Video");
+	//74. LightProbes
 	RegisterUnityClass<LightProbes>("Core");
 
 }

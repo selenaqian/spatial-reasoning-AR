@@ -27,4 +27,8 @@ public class sceneController : MonoBehaviour
   public void toQuestions() {
     SceneManager.LoadScene("MainQuestions");
   }
+
+  public void toVideo() {
+    SceneManager.LoadScene("TutorialVideo");
+  }
 }
