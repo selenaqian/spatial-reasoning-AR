@@ -92,34 +92,36 @@ public class Controller : MonoBehaviour
       }
 
       foreach(Touch touch in Input.touches) {
-        if (IsPointerOverUIObject()) {
-          return;
-        }
-        if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getCorrect())) {
-          if (rotations.nextQuestion() > 0) {
+        if (touch.phase == TouchPhase.Ended) {
+          if (IsPointerOverUIObject()) {
+            return;
+          }
+          if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getCorrect())) {
+            if (rotations.nextQuestion() > 0) {
+              reset();
+            }
+            else {
+              SceneManager.LoadScene("CategoryComplete");
+            }
+            break;
+          }
+          else if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getWrong())) {
             reset();
+            break;
+          }
+          else if (!responseText.gameObject.activeSelf) {
+            responseText.color = Color.white;
+            if (tracking) {
+              responseText.text = "Click the Submit button when you're ready to check the rotation!";
+            }
+            else {
+              responseText.text = "Position the image in the camera view to make the object appear.";
+            }
+            responseText.gameObject.SetActive(true);
           }
           else {
-            SceneManager.LoadScene("CategoryComplete");
+            responseText.gameObject.SetActive(false);
           }
-          break;
-        }
-        else if (responseText.gameObject.activeSelf && responseText.text.Equals(rotations.getCurrent().getWrong())) {
-          reset();
-          break;
-        }
-        else if (!responseText.gameObject.activeSelf) {
-          responseText.color = Color.white;
-          if (tracking) {
-            responseText.text = "Click the Submit button when you're ready to check the rotation!";
-          }
-          else {
-            responseText.text = "Position the image in the camera view to make the object appear.";
-          }
-          responseText.gameObject.SetActive(true);
-        }
-        else {
-          responseText.gameObject.SetActive(false);
         }
       }
     }
