@@ -704,6 +704,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral64E38BA11C25A65529FF1E21CF0DB0960A6C12FE
 IL2CPP_EXTERN_C String_t* _stringLiteral65BA48DACE29FDC178511737E4C73E3D7A17E1DD;
 IL2CPP_EXTERN_C String_t* _stringLiteral74A4CBF928F5AE1175A724AD939752AA52B3AB4C;
 IL2CPP_EXTERN_C String_t* _stringLiteral74A68D35DEB7392395D37FDE551A9F3095FB7FEB;
+IL2CPP_EXTERN_C String_t* _stringLiteral75224DC4B0DA9974EB8C2388A37181E8F8A3D059;
 IL2CPP_EXTERN_C String_t* _stringLiteral75593744E3F137A0C620299F6F16A30F686FA876;
 IL2CPP_EXTERN_C String_t* _stringLiteral7B8BA09C0739FC7A288E726C834A8AC7B2B3E3D4;
 IL2CPP_EXTERN_C String_t* _stringLiteral7E30EB59F0C24B13DDE4C35B615B0654E0326D21;
@@ -5348,24 +5349,6 @@ public:
 	inline void set_m_Height_3(float value)
 	{
 		___m_Height_3 = value;
-	}
-};
-
-
-// UnityEngine.SceneManagement.Scene
-struct  Scene_t942E023788C2BC9FBB7EC8356B4FB0088B2CFED2 
-{
-public:
-	// System.Int32 UnityEngine.SceneManagement.Scene::m_Handle
-	int32_t ___m_Handle_0;
-
-public:
-	inline static int32_t get_offset_of_m_Handle_0() { return static_cast<int32_t>(offsetof(Scene_t942E023788C2BC9FBB7EC8356B4FB0088B2CFED2, ___m_Handle_0)); }
-	inline int32_t get_m_Handle_0() const { return ___m_Handle_0; }
-	inline int32_t* get_address_of_m_Handle_0() { return &___m_Handle_0; }
-	inline void set_m_Handle_0(int32_t value)
-	{
-		___m_Handle_0 = value;
 	}
 };
 
@@ -20526,12 +20509,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_rotation_m429694E264117C6DC682EC6AF45C7864E5155935 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___value0, const RuntimeMethod* method);
 // System.Boolean Category::isCorrect(UnityEngine.GameObject)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Category_isCorrect_m132E47BC6478E578040472BAA197CCECB557CAC1 (Category_tBA902362E18AF2A064E48D04335803BECE62F058 * __this, GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * ___obj0, const RuntimeMethod* method);
-// UnityEngine.Color UnityEngine.Color::get_green()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  Color_get_green_mD53D8F980E92A0755759FBB2981E3DDEFCD084C0 (const RuntimeMethod* method);
+// System.Void UnityEngine.Color::.ctor(System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Color__ctor_mC9AEEB3931D5B8C37483A884DD8EB40DC8946369 (Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 * __this, float ___r0, float ___g1, float ___b2, const RuntimeMethod* method);
 // System.Void Controller::hideSubmitButton()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_hideSubmitButton_mCB557C8D0E98B8F455B9D189FDCDC186ECC9A60E (Controller_t8B9A16C877C6AB237600DBA7B1C74F13FE3FEBD6 * __this, const RuntimeMethod* method);
-// UnityEngine.Color UnityEngine.Color::get_red()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  Color_get_red_m5562DD438931CF0D1FBBBB29BF7F8B752AF38957 (const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<TMPro.TMP_Text>()
 inline TMP_Text_t7BA5B6522651EBED2D8E2C92CBE3F17C14075CE7 * Component_GetComponent_TisTMP_Text_t7BA5B6522651EBED2D8E2C92CBE3F17C14075CE7_mD443382B13E3276EB4AEE7C0B34B0F06FC474395 (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method)
 {
@@ -21216,14 +21197,6 @@ inline void UnityEvent_3__ctor_mC7BDD019012D1DA163838BF179DA06B2EDCF681D (UnityE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void printRotation_ifNewRotationPrint_mBFF9334C9EF261F405F0D2B5F14EFF032723BC4D (printRotation_tA98230188A0B3B29938DAE9F77E1966ACEBE2612 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Quaternion::op_Inequality(UnityEngine.Quaternion,UnityEngine.Quaternion)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Quaternion_op_Inequality_mDA6D2E63A498C8A9AB9A11DD7EA3B96567390C70 (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___lhs0, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___rhs1, const RuntimeMethod* method);
-// UnityEngine.SceneManagement.Scene UnityEngine.SceneManagement.SceneManager::GetActiveScene()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Scene_t942E023788C2BC9FBB7EC8356B4FB0088B2CFED2  SceneManager_GetActiveScene_mD583193D329EBF540D8AB8A062681B1C2AB5EA51 (const RuntimeMethod* method);
-// System.Int32 UnityEngine.SceneManagement.Scene::get_buildIndex()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Scene_get_buildIndex_m764659943B7357F5D6C9165F68EDCFBBDDD6C3C2 (Scene_t942E023788C2BC9FBB7EC8356B4FB0088B2CFED2 * __this, const RuntimeMethod* method);
-// System.Int32 UnityEngine.SceneManagement.SceneManager::get_sceneCountInBuildSettings()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SceneManager_get_sceneCountInBuildSettings_mDEF095420E9AC2FDA96136F51B55254CE11ED529 (const RuntimeMethod* method);
-// System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m258051AAA1489D2D8B252815A45C1E9A2C097201 (int32_t ___sceneBuildIndex0, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Video.VideoPlayer>()
 inline VideoPlayer_tFC1C27AF83D59A5213B2AC561B43FD7E19FE02F2 * Component_GetComponent_TisVideoPlayer_tFC1C27AF83D59A5213B2AC561B43FD7E19FE02F2_m8BD724EFE5F13D9F3164EA576D0914D714758959 (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method)
 {
@@ -22812,7 +22785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_checkCorrect_m48C2C5E70759F8A
 		bool L_2 = Category_isCorrect_m132E47BC6478E578040472BAA197CCECB557CAC1(L_0, L_1, /*hidden argument*/NULL);
 		if (!L_2)
 		{
-			goto IL_00a6;
+			goto IL_00b5;
 		}
 	}
 	{
@@ -22825,7 +22798,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_checkCorrect_m48C2C5E70759F8A
 		NullCheck(L_3);
 		TMP_Text_set_text_m5CFCFE6E69321D9E6B6BAEAF92AE153C3484A960(L_3, L_6, /*hidden argument*/NULL);
 		TextMeshProUGUI_tBA60B913AB6151F8563F7078AD67EB6458129438 * L_7 = __this->get_responseText_17();
-		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_8 = Color_get_green_mD53D8F980E92A0755759FBB2981E3DDEFCD084C0(/*hidden argument*/NULL);
+		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_8;
+		memset((&L_8), 0, sizeof(L_8));
+		Color__ctor_mC9AEEB3931D5B8C37483A884DD8EB40DC8946369((&L_8), (0.47f), (0.87f), (0.36f), /*hidden argument*/NULL);
 		NullCheck(L_7);
 		VirtActionInvoker1< Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_7, L_8);
 		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_9 = __this->get_current_8();
@@ -22841,7 +22816,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_checkCorrect_m48C2C5E70759F8A
 		bool L_13 = Question_isTutorial_m1A1CD4D155AFAD6747100ACC5F04D4E5138BD0CA(L_12, /*hidden argument*/NULL);
 		if (!L_13)
 		{
-			goto IL_008e;
+			goto IL_009d;
 		}
 	}
 	{
@@ -22858,7 +22833,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Controller_checkCorrect_m48C2C5E70759F8A
 		return;
 	}
 
-IL_008e:
+IL_009d:
 	{
 		TextMeshProUGUI_tBA60B913AB6151F8563F7078AD67EB6458129438 * L_18 = __this->get_responseText_17();
 		NullCheck(L_18);
@@ -22869,7 +22844,7 @@ IL_008e:
 		return;
 	}
 
-IL_00a6:
+IL_00b5:
 	{
 		TextMeshProUGUI_tBA60B913AB6151F8563F7078AD67EB6458129438 * L_20 = __this->get_responseText_17();
 		Category_tBA902362E18AF2A064E48D04335803BECE62F058 * L_21 = __this->get_rotations_6();
@@ -22880,7 +22855,9 @@ IL_00a6:
 		NullCheck(L_20);
 		TMP_Text_set_text_m5CFCFE6E69321D9E6B6BAEAF92AE153C3484A960(L_20, L_23, /*hidden argument*/NULL);
 		TextMeshProUGUI_tBA60B913AB6151F8563F7078AD67EB6458129438 * L_24 = __this->get_responseText_17();
-		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_25 = Color_get_red_m5562DD438931CF0D1FBBBB29BF7F8B752AF38957(/*hidden argument*/NULL);
+		Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  L_25;
+		memset((&L_25), 0, sizeof(L_25));
+		Color__ctor_mC9AEEB3931D5B8C37483A884DD8EB40DC8946369((&L_25), (0.98f), (0.39f), (0.27f), /*hidden argument*/NULL);
 		NullCheck(L_24);
 		VirtActionInvoker1< Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_24, L_25);
 		TextMeshProUGUI_tBA60B913AB6151F8563F7078AD67EB6458129438 * L_26 = __this->get_responseText_17();
@@ -22958,6 +22935,16 @@ IL_0017:
 		L_4->set_currentQuestion_1(L_5);
 		Controller_reset_m1A797DCE0A090FBBED271E607736C1AB2DF257E1(__this, /*hidden argument*/NULL);
 		return;
+	}
+}
+// Question Controller::getCurrentQuestion()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC * Controller_getCurrentQuestion_m6936BD824B4EF8370DDFE771881156F4C5722439 (Controller_t8B9A16C877C6AB237600DBA7B1C74F13FE3FEBD6 * __this, const RuntimeMethod* method)
+{
+	{
+		Category_tBA902362E18AF2A064E48D04335803BECE62F058 * L_0 = __this->get_rotations_6();
+		NullCheck(L_0);
+		Question_tBE1A7D1B48248BC15DCC6E78D3A1FCF87EAECFFC * L_1 = Category_getCurrent_m2A834408ECFBB8E43A8A1B8590961E3A21511BD9(L_0, /*hidden argument*/NULL);
+		return L_1;
 	}
 }
 // System.Void Controller::.ctor()
@@ -37387,34 +37374,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void printRotation__ctor_mEF442B757E830186A1D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void sceneController::nextScene()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void sceneController_nextScene_mAAE582D98BF60B13D26A223A14A9E67D08719DB5 (sceneController_tB84B13FD2A4823A46DF4E949BDD71C1A49531895 * __this, const RuntimeMethod* method)
-{
-	int32_t V_0 = 0;
-	Scene_t942E023788C2BC9FBB7EC8356B4FB0088B2CFED2  V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	{
-		Scene_t942E023788C2BC9FBB7EC8356B4FB0088B2CFED2  L_0 = SceneManager_GetActiveScene_mD583193D329EBF540D8AB8A062681B1C2AB5EA51(/*hidden argument*/NULL);
-		V_1 = L_0;
-		int32_t L_1 = Scene_get_buildIndex_m764659943B7357F5D6C9165F68EDCFBBDDD6C3C2((Scene_t942E023788C2BC9FBB7EC8356B4FB0088B2CFED2 *)(&V_1), /*hidden argument*/NULL);
-		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_1, (int32_t)1));
-		int32_t L_2 = SceneManager_get_sceneCountInBuildSettings_mDEF095420E9AC2FDA96136F51B55254CE11ED529(/*hidden argument*/NULL);
-		int32_t L_3 = V_0;
-		if ((((int32_t)L_2) <= ((int32_t)L_3)))
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		int32_t L_4 = V_0;
-		SceneManager_LoadScene_m258051AAA1489D2D8B252815A45C1E9A2C097201(L_4, /*hidden argument*/NULL);
-	}
-
-IL_001e:
-	{
-		return;
-	}
-}
 // System.Void sceneController::toMenu()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void sceneController_toMenu_m763BB6F026140FEF580C1EF93707F3EEDDEDD715 (sceneController_tB84B13FD2A4823A46DF4E949BDD71C1A49531895 * __this, const RuntimeMethod* method)
 {
@@ -37509,11 +37468,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void videoEnd_CheckOver_m12802B16A20B52F78028
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
 		Debug_Log_m4B7C70BAFD477C6BDB59C88A0934F0B018D03708(_stringLiteralE685BDE8D4987FE25529B102FBE9E765B02A80A9, /*hidden argument*/NULL);
-		Button_t1203820000D5513FDCCE3D4BFF9C1C9CC755CC2B * L_0 = __this->get_button_5();
-		NullCheck(L_0);
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_1 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(L_0, /*hidden argument*/NULL);
-		NullCheck(L_1);
-		GameObject_SetActive_m25A39F6D9FB68C51F13313F9804E85ACC937BC04(L_1, (bool)1, /*hidden argument*/NULL);
+		SceneManager_LoadScene_mFC850AC783E5EA05D6154976385DFECC251CDFB9(_stringLiteral75224DC4B0DA9974EB8C2388A37181E8F8A3D059, /*hidden argument*/NULL);
 		return;
 	}
 }

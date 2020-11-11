@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class videoEnd : MonoBehaviour
 {
@@ -20,6 +21,6 @@ public class videoEnd : MonoBehaviour
     void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {
       Debug.Log("video finished");
-      button.gameObject.SetActive(true);
+      SceneManager.LoadScene("AltMenu");
     }
 }

@@ -7,8 +7,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -20,8 +21,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -33,8 +35,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -46,8 +49,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -101,8 +105,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -114,8 +119,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -127,8 +133,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -168,8 +175,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -251,8 +259,9 @@
             "moduleName": "Audio",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
         },
@@ -263,8 +272,9 @@
             "moduleName": "Audio",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
         },
@@ -284,8 +294,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -297,8 +308,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -310,8 +322,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -323,8 +336,8 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
+                "Assets/Scenes/AltMenu.unity",
                 "Assets/Scenes/Menu.unity",
-                "Assets/Scenes/TutorialVideo.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -336,8 +349,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -349,8 +363,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -362,8 +377,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -375,8 +391,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -388,8 +405,9 @@
             "moduleName": "UI",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -401,8 +419,9 @@
             "moduleName": "UI",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -432,8 +451,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -445,8 +465,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -476,10 +497,7 @@
             "moduleName": "TextRendering",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
-                "Assets/Scenes/TutorialVideo.unity",
-                "Assets/Scenes/MainQuestions.unity",
-                "Assets/Scenes/CategoryComplete.unity"
+                "Assets/Scenes/MainQuestions.unity"
             ]
         },
         {
@@ -489,8 +507,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -502,8 +521,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -515,8 +535,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]
@@ -528,8 +549,9 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/SplashScreen.unity",
-                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/TutorialVideo.unity",
+                "Assets/Scenes/AltMenu.unity",
+                "Assets/Scenes/Menu.unity",
                 "Assets/Scenes/MainQuestions.unity",
                 "Assets/Scenes/CategoryComplete.unity"
             ]

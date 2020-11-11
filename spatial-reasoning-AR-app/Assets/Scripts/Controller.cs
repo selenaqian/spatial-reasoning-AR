@@ -265,7 +265,7 @@ public class Controller : MonoBehaviour
     public void checkCorrect() {
       if(rotations.isCorrect(current)) {
         responseText.text = rotations.getCurrent().getCorrect();
-        responseText.color = Color.green;
+        responseText.color = new Color(0.47f, 0.87f, 0.36f);
         current.SetActive(false);
         prompt.SetActive(false);
         if (rotations.getCurrent().isTutorial()) {
@@ -280,7 +280,7 @@ public class Controller : MonoBehaviour
       }
       else {
         responseText.text = rotations.getCurrent().getWrong();
-        responseText.color = Color.red;
+        responseText.color = new Color(0.98f, 0.39f, 0.27f);
         responseText.gameObject.SetActive(true);
         hideSubmitButton();
       }
@@ -300,5 +300,9 @@ public class Controller : MonoBehaviour
       }
       rotations.currentQuestion = number;
       reset();
+    }
+
+    public Question getCurrentQuestion() {
+      return rotations.getCurrent();
     }
 }

@@ -110,7 +110,7 @@ static Il2CppMethodPointer s_methodPointers[28] =
 static const int32_t s_InvokerIndices[28] = 
 {
 	1104,
-	1970,
+	1968,
 	26,
 	26,
 	122,
@@ -120,7 +120,7 @@ static const int32_t s_InvokerIndices[28] =
 	122,
 	134,
 	122,
-	1971,
+	1969,
 	102,
 	26,
 	177,
@@ -131,11 +131,11 @@ static const int32_t s_InvokerIndices[28] =
 	26,
 	102,
 	141,
-	1972,
+	1970,
 	26,
 	102,
-	1957,
-	1973,
+	1955,
+	1971,
 	26,
 };
 extern const Il2CppCodeGenModule g_UnityEngine_VideoModuleCodeGenModule;

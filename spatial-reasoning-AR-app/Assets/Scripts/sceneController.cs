@@ -10,16 +10,6 @@ using UnityEngine.SceneManagement;
 
 public class sceneController : MonoBehaviour
 {
-  /**
-  * Loads next scene in the list. Used to go from splash screen to menu.
-  */
-  public void nextScene() {
-    int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-    if (SceneManager.sceneCountInBuildSettings > nextSceneIndex) {
-      SceneManager.LoadScene(nextSceneIndex);
-    }
-  }
-
   public void toMenu() {
     SceneManager.LoadScene("Menu");
   }
